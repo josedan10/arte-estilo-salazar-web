@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import styled, { withTheme } from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWhatsapp, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 const sections = [
   '',
@@ -9,10 +11,30 @@ const sections = [
   'Contact'
 ]
 
-export default () => {
+const socials = [
+  {
+    name: 'whatsapp',
+    url: 'https://wa.me/584122308065',
+    icon: faWhatsapp
+  },
+  {
+    name: 'facebook',
+    url: 'https://www.facebook.com',
+    icon: faFacebookF
+  },
+  {
+    name: 'facebook',
+    url: 'https://www.instagram.com',
+    icon: faInstagram
+  },
+]
+
+export default withTheme ((props) => {
   const [isHidden, setHidden] = useState(true)
   return (
     <StyledNav className={isHidden && 'hide'}
+      onMouseEnter={e => setHidden(false)}
+      onMouseLeave={e => setHidden(true)} 
     >
       <div className="eventPanel"
         onMouseEnter={e => setHidden(false)}
@@ -24,12 +46,43 @@ export default () => {
       
       <ul>
         { sections.map((section, index) => (
-          <li key={`${section}-${index}`}><a href={`#${section}`}>{section || 'Home'}</a></li>
+          <li key={`${section}-${index}`}>
+            <a 
+              onMouseEnter={e => setHidden(false)}
+              href={`#${section}`}
+            >
+              {section || 'Home'}
+            </a>
+          </li>
         )) }
       </ul>
+
+      <StyledSocial
+        onMouseEnter={e => setHidden(false)}
+      >
+        {
+          socials.map((account, idx) => {
+            return (
+              <a
+                href={account.url}
+                target='_blank'
+                rel='noopener noreferrer'
+                key={idx + account.name}
+                onMouseEnter={e => setHidden(false)}
+              >
+                <FontAwesomeIcon
+                  icon={account.icon}
+                  color={props.theme.secondaryColor}
+                  size="2x"
+                />
+              </a>
+            )
+          })
+        }
+      </StyledSocial>
     </StyledNav>
   )
-}
+})
 
 const StyledNav = styled.nav`
   height: 100vh;
@@ -42,6 +95,9 @@ const StyledNav = styled.nav`
   transition: transform .5s ease;
   z-index: 800;
   transform: translate(0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .eventPanel {
     width: 200px;
@@ -89,10 +145,21 @@ const StyledNav = styled.nav`
       display: block;
       padding: 1rem 2rem;
       text-align: right;
+      transition: all .3s ease;
 
       &:hover {
+        transition: all .3 ease;
+        font-size: 20px;
         background-color: ${props => props.theme.linksColor};
       }
     }
   }
+`
+
+const StyledSocial = styled.div`
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+
+  z-index: 950;
 `
