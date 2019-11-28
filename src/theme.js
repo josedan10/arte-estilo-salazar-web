@@ -3,5 +3,5 @@ export default {
   secondaryColor: 'rgb(254,171,84)',
   bgColor: '#fff',
   textColor: '#121212',
-  linksColor: '#bf181b'
+  linksColor: '#8b181b'
 }
