@@ -4,11 +4,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 const sections = [
-  '',
-  'About',
-  'Portfolio',
-  'Testimonials',
-  'Contact'
+  {
+    name: 'Home',
+    link: ''
+  },
+  {
+    name: 'Sobre Nosotros',
+    link: '#About'
+  },
+  {
+    name: 'Portafolio',
+    link: '#Portfolio'
+  },
+  {
+    name: 'Testimonios',
+    link: '#Testimonials'
+  },
+  {
+    name: 'Contacto',
+    link: '#Contact'
+  }
 ]
 
 const socials = [
@@ -49,9 +64,9 @@ export default withTheme ((props) => {
           <li key={`${section}-${index}`}>
             <a 
               onMouseEnter={e => setHidden(false)}
-              href={`#${section}`}
+              href={`${section.url}`}
             >
-              {section || 'Home'}
+              {section.name}
             </a>
           </li>
         )) }
@@ -91,7 +106,7 @@ const StyledNav = styled.nav`
   top: 0;
   background-color: ${props => props.theme.primaryColor};
   box-sizing: border-box;
-  width: 200px;
+  width: 220px;
   transition: transform .5s ease;
   z-index: 800;
   transform: translate(0);
@@ -122,7 +137,7 @@ const StyledNav = styled.nav`
   }
 
   &.hide {
-    transform: translate(calc(2rem - 200px));
+    transform: translate(calc(2rem - 220px));
     transition: transform .5s ease;
   }
 

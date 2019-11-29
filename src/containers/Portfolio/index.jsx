@@ -32,7 +32,6 @@ export default class Portfolio extends React.Component {
   }
 
   render () {
-    console.log(this.state.works)
 
     return (
       <StyledPortfolio id="Portfolio" className="portfolio">
@@ -44,8 +43,8 @@ export default class Portfolio extends React.Component {
               {
                 this.state.works.map((work, ind) => (
                   <WorkContainer key={`${work.title}`}>
-                    <a href="javascript:;"
-                      
+                    <a href="#"
+                      onClick={e => e.preventDefault()}
                     >
                       <picture><img src={work.images[0]} alt={work.title}/></picture>
                     </a>

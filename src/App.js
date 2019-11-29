@@ -8,6 +8,7 @@ import './assets/scss/index.scss'
 import Home from './containers/Home'
 import About from './containers/About'
 import Portfolio from './containers/Portfolio'
+import Testimonials from './containers/Testimonials'
 
 function App () {
   return (
@@ -17,6 +18,7 @@ function App () {
         <Home />
         <About />
         <Portfolio />
+        <Testimonials />
       </main>
     </ThemeProvider>
   )

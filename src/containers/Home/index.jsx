@@ -10,7 +10,6 @@ export default class Home extends React.Component {
     return (
       <section className="home" style={{
         background: 'black',
-        width: 'calc(100vw - 2rem)',
         marginLeft: '2rem',
         height: '100vh',
         maxHeight: '700px',
