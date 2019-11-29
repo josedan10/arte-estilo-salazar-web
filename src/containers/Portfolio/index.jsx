@@ -60,11 +60,12 @@ export default class Portfolio extends React.Component {
 }
 
 const StyledPortfolio = styled.section`
-  background-color: ${props => props.theme.primaryColor};
+  background-image: url('/images/wood-texture.jpg');
+  background-size: cover;
 
   .section-title {
     text-align: right;
-    color: ${props => props.theme.secondaryColor};
+    color: ${props => props.theme.primaryColor};
   }
 `
 
@@ -73,5 +74,7 @@ const SlickContainer = styled.div`
 `
 
 const WorkContainer = styled.div`
-
+  img {
+    box-shadow: 8px 8px 20px ${props => props.theme.primaryColor};
+  }
 `

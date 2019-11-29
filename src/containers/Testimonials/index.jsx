@@ -20,8 +20,8 @@ export default withTheme ((props) => (
     <Slider {...settings}>
       {
         config.testimonials.map((testimonial, ind) => (
-          <div>
-            <div className="testimonial" key={'testimonial-' + ind}>
+          <div key={'testimonial-' + ind}>
+            <div className="testimonial" >
               <picture>
                 <img src={testimonial.picture} alt={`Testimonial ${testimonial.name} Arte y Estilo Salazar`} />  
               </picture>
@@ -35,7 +35,7 @@ export default withTheme ((props) => (
                   { testimonial.socialLinks &&
                     testimonial.socialLinks.map(social => (
                       <a href={social.url} key={social.name + testimonial.name}>
-                        <FontAwesomeIcon icon={['fab', social.name]} size='lg' color={props.theme.secondaryColor}/>
+                        <FontAwesomeIcon icon={['fab', social.name]} size='lg' color={props.theme.primaryColor}/>
                       </a>
                     ))
                   }
@@ -68,22 +68,24 @@ const ContentWrapper = styled.div`
 `
 
 const StyledSection = styled.section`
+  background: linear-gradient(to right, #fff, ${props => props.theme.bgColor});
+
   .section-title {
     color: ${props => props.theme.primaryColor};
   }
 
   .testimonial {
-    background-color: ${props => props.theme.primaryColor};
-    color: ${props => props.theme.secondaryColor};
+    background-color: ${props => props.theme.bgColor};
+    color: ${props => props.theme.primaryColor};
     display: flex !important;
     align-items: center;
     padding: 1rem;
     height: 250px;
     border-radius: 10px;
-    border: 4px solid ${props => props.theme.secondaryColor};
+    border: 4px solid ${props => props.theme.primaryColor};
     margin: 0 20px;
 
-    box-shadow: 12px 12px 10px #444;
+    box-shadow: 12px 12px 10px #454545;
 
     picture {
       img {
@@ -102,6 +104,7 @@ const StyledSection = styled.section`
     .title {
       font-size: 0.8rem;
       font-variant: cursive;
+      color: ${props => props.theme.secondaryColor};
     }
 
     .content {

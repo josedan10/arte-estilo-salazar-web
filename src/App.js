@@ -9,6 +9,8 @@ import Home from './containers/Home'
 import About from './containers/About'
 import Portfolio from './containers/Portfolio'
 import Testimonials from './containers/Testimonials'
+import Contact from './containers/Contact'
+import Footer from './components/Footer'
 
 function App () {
   return (
@@ -19,6 +21,8 @@ function App () {
         <About />
         <Portfolio />
         <Testimonials />
+        <Contact />
+        <Footer />
       </main>
     </ThemeProvider>
   )

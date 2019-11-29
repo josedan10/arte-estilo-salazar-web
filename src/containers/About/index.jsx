@@ -11,9 +11,7 @@ export default () => (
 )
 
 const StyledAbout = styled.section`
-  background-color: ${props => props.theme.secondaryColor};
-  background-image: url('/images/wood-texture.jpg');
-  background-size: cover;
+  background: linear-gradient(to right, #fff, ${props => props.theme.bgColor});
   color: ${props => props.theme.primaryColor};
 
   p {
