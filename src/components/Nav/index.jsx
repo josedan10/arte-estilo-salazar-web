@@ -41,7 +41,7 @@ export default withTheme ((props) => {
         onMouseLeave={e => setHidden(true)} 
       />
       <picture>
-        <img className="logo" src="logo-neg.svg" alt="Arte y Estilo Salazar logo"/>
+        <img className="logo" src="/images/logo-neg.svg" alt="Arte y Estilo Salazar logo"/>
       </picture>
       
       <ul>

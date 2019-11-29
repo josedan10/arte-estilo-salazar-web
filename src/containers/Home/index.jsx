@@ -8,13 +8,13 @@ export default class Home extends React.Component {
 
   render () {
     return (
-      <div className="home" style={{
+      <section className="home" style={{
         background: 'black',
         width: 'calc(100vw - 2rem)',
         marginLeft: '2rem',
         height: '100vh',
         maxHeight: '700px',
-      }}></div>
+      }}></section>
     )
   }
 }
