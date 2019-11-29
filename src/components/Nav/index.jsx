@@ -11,7 +11,7 @@ const sections = [
     icon: faHome
   },
   {
-    name: 'Sobre Nosotros',
+    name: 'Acerca de Nosotros',
     url: '/#About',
     icon: faUserTie
   },
@@ -62,6 +62,22 @@ const socials = [
 
 export default withTheme ((props) => {
   const [isHidden, setHidden] = useState(true)
+  const [activeSection, setActiveSection] = useState(null)
+  
+  window.addEventListener("scroll", () => {
+    let about = document.getElementById('About')
+    let contact = document.getElementById('Contact')
+    let portfolio = document.getElementById('Portfolio')
+    let clients = document.getElementById('Testimonials')
+
+    if (window.pageYOffset < about.offsetTop) setActiveSection('inicio')
+    else if (window.pageYOffset >= about.offsetTop && window.pageYOffset < portfolio.offsetTop) setActiveSection('acerca de nosotros')
+    else if (window.pageYOffset >= portfolio.offsetTop && window.pageYOffset < clients.offsetTop) setActiveSection('portafolio')
+    else if (window.pageYOffset >= clients.offsetTop && window.pageYOffset < contact.offsetTop)
+    setActiveSection('clientes')
+    else setActiveSection('contacto')
+  })
+
   return (
     <StyledNav className={isHidden && 'hide'}
       onMouseEnter={e => setHidden(false)}
@@ -81,6 +97,7 @@ export default withTheme ((props) => {
             <a 
               onMouseEnter={e => setHidden(false)}
               href={`${section.url}`}
+              className={activeSection === section.name.toLowerCase() ? 'active' : ''}
             >
               {section.name} <FontAwesomeIcon className='icon' icon={section.icon} size="lg"/>
             </a>
@@ -99,7 +116,7 @@ export default withTheme ((props) => {
                 target='_blank'
                 rel='noopener noreferrer'
                 key={idx + account.name}
-                onMouseEnter={e => setHidden(false)}
+                onMouseEnter={e => setHidden(false)}                
               >
                 <FontAwesomeIcon
                   icon={account.icon}
@@ -122,7 +139,7 @@ const StyledNav = styled.nav`
   top: 0;
   background-color: ${props => props.theme.bgColor};
   box-sizing: border-box;
-  width: 240px;
+  width: 260px;
   transition: transform .5s ease;
   z-index: 800;
   transform: translate(0);
@@ -133,7 +150,7 @@ const StyledNav = styled.nav`
   box-shadow: 0 8px 15px ${props => props.theme.primaryColor};
 
   .eventPanel {
-    width: 200px;
+    width: 250px;
     position: fixed;
     height: 100vh;
     z-index: 850;
@@ -149,13 +166,13 @@ const StyledNav = styled.nav`
     align-items: flex-start;
 
     .logo {
-      width: 80%;
+      width: 75%;
       margin: 1rem auto;
     }
   }
 
   &.hide {
-    transform: translate(calc(2rem - 235px));
+    transform: translate(calc(2rem - 250px));
     transition: transform .5s ease;
   }
 
@@ -182,10 +199,11 @@ const StyledNav = styled.nav`
       transition: all .3s ease;
 
       .icon {
-        margin-left: 10px;
+        margin-left: 15px;
       }
 
-      &:hover {
+      &:hover,
+      &.active {
         transition: all .3 ease;
         font-size: 20px;
         background-color: ${props => props.theme.linksColor};
@@ -196,7 +214,7 @@ const StyledNav = styled.nav`
 `
 
 const StyledSocial = styled.div`
-  padding: 2.1rem;
+  padding: 2.5rem;
   display: flex;
   justify-content: space-between;
 

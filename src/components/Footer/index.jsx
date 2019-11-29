@@ -11,7 +11,7 @@ const sections = [
     url: '/#'
   },
   {
-    name: 'Sobre Nosotros',
+    name: 'Acerca de Nosotros',
     url: '/#About'
   },
   {
@@ -81,7 +81,7 @@ export default (props) => (
       <Box className="social" width={[1, 1 / 3]} px={3}>
         {
           socials.map(social => (
-            <a href={social.url} target="_blank">
+            <a href={social.url} target="_blank" rel="noopener noreferrer">
               {social.username} <FontAwesomeIcon className="icon" icon={social.icon} size="lg" />
             </a>
           ))

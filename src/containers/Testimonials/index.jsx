@@ -99,12 +99,14 @@ const StyledSection = styled.section`
     .name {
       text-decoration: underline;
       margin-bottom: 5px;
+      font-weight: 500;
     }
 
     .title {
       font-size: 0.8rem;
       font-variant: cursive;
-      color: ${props => props.theme.secondaryColor};
+      // color: ${props => props.theme.secondaryColor};
+      font-weight: 500;
     }
 
     .content {

@@ -129,6 +129,7 @@ const StyledInput = styled(Input)`
 
 const StyledLabel = styled(Label)`
   color: ${props => props.theme.primaryColor} !important;
+  font-weight: 500;
 `
 const StyledTextarea = styled(Textarea)`
   resize: vertical;
