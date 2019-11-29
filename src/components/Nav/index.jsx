@@ -5,24 +5,24 @@ import { faWhatsapp, faFacebookF, faInstagram } from '@fortawesome/free-brands-s
 
 const sections = [
   {
-    name: 'Home',
-    link: ''
+    name: 'Inicio',
+    url: '/'
   },
   {
     name: 'Sobre Nosotros',
-    link: '#About'
+    url: '/#About'
   },
   {
     name: 'Portafolio',
-    link: '#Portfolio'
+    url: '/#Portfolio'
   },
   {
     name: 'Testimonios',
-    link: '#Testimonials'
+    url: '/#Testimonials'
   },
   {
     name: 'Contacto',
-    link: '#Contact'
+    url: '/#Contact'
   }
 ]
 
