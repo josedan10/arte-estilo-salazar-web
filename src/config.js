@@ -3,33 +3,29 @@ const TESTIMONIALS_PATH = '/images/testimonials/'
 let i = 0
 
 export default {
-  testimonials: [
-    {
+  testimonials: [{
       name: 'Richard Páez',
       title: 'Ex director técnico de la vinotinto',
       picture: `${TESTIMONIALS_PATH}richard.jpeg`,
-      testimonial: 'Quis consequat est exercitation dolore est et elit sunt duis officia proident excepteur Lorem commodo. Anim commodo nisi ea deserunt esse est pariatur adipisicing sit nisi duis eu voluptate.',
+      testimonial: 'Quis consequat est exercitation dolore est et elit sunt duis officia proident excepteur Lorem commodo. Anim commodo nisi ea deserunt esse est pariatu.',
       socialLinks: []
     },
     {
       name: 'Yimy Alvarado',
       title: 'Comerciante local y padre de familia',
       picture: `${TESTIMONIALS_PATH}yimy.jpg`,
-      testimonial: 'Anim commodo nisi ea deserunt esse est pariatur adipisicing sit nisi duis eu voluptate. Commodo fugiat laborum eu aliquip. Exercitation cillum sint quis culpa. Ea sint quis occaecat cupidatat deserunt velit qui. ',
-      socialLinks: [
-        {
-          name: 'instagram',
-          url: 'https://www.instagram.com/yimyalvarado7/'
-        }
-      ]
+      testimonial: 'Anim commodo nisi ea deserunt esse est pariatur adipisicing sit nisi duis eu voluptate. Commodo fugiat laborum eu aliquip.',
+      socialLinks: [{
+        name: 'instagram',
+        url: 'https://www.instagram.com/yimyalvarado7/'
+      }]
     },
     {
       name: 'José Quintero',
       title: 'Desarrollador fullstack',
       picture: `${TESTIMONIALS_PATH}jose.jpg`,
-      testimonial: 'Ex officia Lorem labore et nostrud occaecat magna cupidatat labore occaecat quis. Quis consequat est exercitation dolore est et elit sunt duis officia proident excepteur Lorem commodo.',
-      socialLinks: [
-        {
+      testimonial: 'Ex officia Lorem labore et nostrud occaecat magna cupidatat labore occaecat quis. Quis consequat est exercitation dolore est et elit sunt dui officia.',
+      socialLinks: [{
           name: 'instagram',
           url: 'https://www.instagram.com/josedanqf/'
         },
@@ -48,16 +44,13 @@ export default {
       title: 'Comerciante local y padre de familia',
       picture: `${TESTIMONIALS_PATH}yimy.jpg`,
       testimonial: 'Anim commodo nisi ea deserunt esse est pariatur adipisicing sit nisi duis eu voluptate. Commodo fugiat laborum eu aliquip.',
-      socialLinks: [
-        {
-          name: 'instagram',
-          url: 'https://www.instagram.com/yimyalvarado7/'
-        }
-      ]
+      socialLinks: [{
+        name: 'instagram',
+        url: 'https://www.instagram.com/yimyalvarado7/'
+      }]
     }
   ],
-  works: [
-    {
+  works: [{
       title: 'Trabajo # 1',
       images: [
         `${WORKS_PATH}/work1-${i++ % 3 + 1}.jpg`,
