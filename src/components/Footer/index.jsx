@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 import { Flex, Box } from "rebass";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,23 +15,23 @@ import {
 const sections = [
   {
     name: "Inicio",
-    url: "/#"
+    url: "inicio"
   },
   {
-    name: "Acerca de Nosotros",
-    url: "/#About"
+    name: "Tu mejor elección",
+    url: "por-que-elegirnos"
   },
   {
     name: "Portafolio",
-    url: "/#Portfolio"
+    url: "portafolio"
   },
   {
     name: "Clientes",
-    url: "/#Testimonials"
+    url: "testimonios"
   },
   {
     name: "Contacto",
-    url: "/#Contact"
+    url: "contacto"
   }
 ];
 
@@ -80,15 +81,21 @@ export default props => (
         </p>
       </Box>
       <Box className="nav" width={[1, 1 / 3]} px={3}>
-        {sections.map(section => (
-          <a href={section.url} key={section.url + section.name}>
+        {sections.map((section, index) => (
+          <Link
+            key={section.name + section.url + index}
+            to={section.url}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
             {section.name}
-          </a>
+          </Link>
         ))}
       </Box>
       <Box className="social" width={[1, 1 / 3]} px={3}>
         {socials.map(social => (
-          <a href={social.url} target="_blank" rel="noopener noreferrer">
+          <a key={social.url} href={social.url} target="_blank" rel="noopener noreferrer">
             {social.username}{" "}
             <FontAwesomeIcon className="icon" icon={social.icon} size="lg" />
           </a>

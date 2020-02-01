@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled, { withTheme } from "styled-components";
+import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBriefcase,
@@ -21,27 +22,27 @@ import {
 const sections = [
   {
     name: "Inicio",
-    url: "/#",
+    url: "inicio",
     icon: faHome
   },
   {
-    name: "Acerca de Nosotros",
-    url: "/#About",
+    name: "Tu mejor elección",
+    url: "por-que-elegirnos",
     icon: faUserTie
   },
   {
     name: "Portafolio",
-    url: "/#Portfolio",
+    url: "portafolio",
     icon: faBriefcase
   },
   {
     name: "Clientes",
-    url: "/#Testimonials",
+    url: "testimonios",
     icon: faHandshake
   },
   {
     name: "Contacto",
-    url: "/#Contact",
+    url: "contacto",
     icon: faEnvelope
   }
 ];
@@ -79,17 +80,17 @@ export default withTheme(props => {
   const [activeSection, setActiveSection] = useState(null);
 
   window.addEventListener("scroll", () => {
-    let about = document.getElementById("About");
-    let contact = document.getElementById("Contact");
-    let portfolio = document.getElementById("Portfolio");
-    let clients = document.getElementById("Testimonials");
+    let about = document.getElementById("por-que-elegirnos");
+    let contact = document.getElementById("contacto");
+    let portfolio = document.getElementById("portafolio");
+    let clients = document.getElementById("testimonios");
 
     if (window.pageYOffset < about.offsetTop) setActiveSection("inicio");
     else if (
       window.pageYOffset >= about.offsetTop &&
       window.pageYOffset < portfolio.offsetTop
     )
-      setActiveSection("acerca de nosotros");
+      setActiveSection("por-que-elegrinos");
     else if (
       window.pageYOffset >= portfolio.offsetTop &&
       window.pageYOffset < clients.offsetTop
@@ -141,17 +142,21 @@ export default withTheme(props => {
       <ul className="page-nav">
         {sections.map((section, index) => (
           <li key={`${section}-${index}`}>
-            <a
+            <Link
               onClick={e => setHidden(true)}
               onMouseEnter={e => setHidden(false)}
-              href={`${section.url}`}
+              to={section.url}
+              smooth={true}
+              offset={50}
+              duration={500}
+              spy={true}
               className={
-                activeSection === section.name.toLowerCase() ? "active" : ""
+                activeSection === section.url ? "active" : ""
               }
             >
               {section.name}{" "}
               <FontAwesomeIcon className="icon" icon={section.icon} size="lg" />
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

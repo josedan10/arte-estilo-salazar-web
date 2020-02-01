@@ -9,16 +9,15 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <StyledHome className="home" id="Home">
-        <img src="/images/home-bg.jpg" alt="Hermanos Salazar" />
+      <StyledHome className="home" id="inicio">
+        <img alt="Diseño de cocina. Arte y Estilos Salazar." />
         <h1 className="grand-title">Nuestro legado es su satisfacción</h1>
         <div className="content">
           <p>
-            Hacemos realidad el espacio de tus sueños, porque nuestro servicio
-            es tan grande como tu imaginacion.
+            Hacemos realidad el <b>espacio de tus sueños</b>, porque nuestro servicio es tan grande como tu imaginación.
           </p>
           <p>
-            Animate al cambio de tu hogar <b>¡Contáctanos!</b>
+            Reinvéntate y <b>acondiciona el área que desees</b> con nosotros <b>¡Contáctanos!</b>
           </p>
 
           <StyledLink href="/#Contact">Solicita tu presupuesto</StyledLink>
@@ -54,10 +53,10 @@ const StyledLink = styled.a`
 `;
 
 const StyledHome = styled.section`
-  // background: linear-gradient(to right, #fff, ${props =>
-    props.theme.bgColor});
-  // margin-left: 2rem;
-  min-height: 700px;
+  background: url(/images/home-bg.jpg);
+  background-position: top center;
+  background-size: cover;
+  height: 100vh;
   overflow: hidden;
   position: relative;
 

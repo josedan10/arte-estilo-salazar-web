@@ -33,7 +33,7 @@ export default class Portfolio extends React.Component {
 
   render() {
     return (
-      <StyledPortfolio id="Portfolio" className="portfolio">
+      <StyledPortfolio id="portafolio" className="portfolio">
         <h1 className="section-title">Algunos de nuestros trabajos</h1>
         <SlickContainer>
           {this.state.works ? (

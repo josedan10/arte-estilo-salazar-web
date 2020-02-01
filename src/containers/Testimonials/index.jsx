@@ -36,7 +36,7 @@ const settings = {
   ]
 };
 export default withTheme(props => (
-  <StyledSection id="Testimonials" className="testimonials">
+  <StyledSection id="testimonios" className="testimonials">
     <h1 className="section-title">En ellos dejamos nuestro legado</h1>
     <Slider {...settings}>
       {config.testimonials.map((testimonial, ind) => (

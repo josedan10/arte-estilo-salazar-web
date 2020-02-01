@@ -25,7 +25,7 @@ export default class Contact extends React.Component {
 
   render() {
     return (
-      <FormContainer id="Contact">
+      <FormContainer id="contacto">
         <h1 className="section-title">¡Pide ya tu cotización!</h1>
         <Box
           as="form"

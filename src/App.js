@@ -15,7 +15,7 @@ import Footer from './components/Footer'
 function App () {
   return (
     <ThemeProvider theme={theme}>
-      <main>
+      <main id="app">
         <Nav />
         <Home />
         <About />
