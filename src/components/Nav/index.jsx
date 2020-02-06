@@ -77,33 +77,6 @@ const socials = [
 
 export default withTheme(props => {
   const [isHidden, setHidden] = useState(true);
-  const [activeSection, setActiveSection] = useState(null);
-
-  window.addEventListener("scroll", () => {
-    let about = document.getElementById("por-que-elegirnos");
-    let contact = document.getElementById("contacto");
-    let portfolio = document.getElementById("portafolio");
-    let clients = document.getElementById("testimonios");
-
-    if (window.pageYOffset < about.offsetTop) setActiveSection("inicio");
-    else if (
-      window.pageYOffset >= about.offsetTop &&
-      window.pageYOffset < portfolio.offsetTop
-    )
-      setActiveSection("por-que-elegrinos");
-    else if (
-      window.pageYOffset >= portfolio.offsetTop &&
-      window.pageYOffset < clients.offsetTop
-    )
-      setActiveSection("portafolio");
-    else if (
-      window.pageYOffset >= clients.offsetTop &&
-      window.pageYOffset < contact.offsetTop
-    )
-      setActiveSection("clientes");
-    else setActiveSection("contacto");
-  });
-
   return (
     <StyledNav
       className={isHidden && "hide"}
@@ -150,9 +123,6 @@ export default withTheme(props => {
               offset={50}
               duration={500}
               spy={true}
-              className={
-                activeSection === section.url ? "active" : ""
-              }
             >
               {section.name}{" "}
               <FontAwesomeIcon className="icon" icon={section.icon} size="lg" />
@@ -161,7 +131,7 @@ export default withTheme(props => {
         ))}
       </ul>
 
-      <StyledSocial onMouseEnter={e => setHidden(false)}>
+      <StyledSocial className="social" onMouseEnter={e => setHidden(false)}>
         {socials.map((account, idx) => {
           return (
             <a
@@ -191,7 +161,7 @@ const StyledNav = styled.nav`
   top: 0;
   background-color: ${props => props.theme.bgColor};
   box-sizing: border-box;
-  width: 260px;
+  width: 280px;
   transition: all 0.5s ease;
   z-index: 800;
   transform: translate(0);
@@ -222,7 +192,7 @@ const StyledNav = styled.nav`
   }
 
   .eventPanel {
-    width: 250px;
+    width: 280px;
     position: fixed;
     height: 100vh;
     z-index: 850;
@@ -246,7 +216,7 @@ const StyledNav = styled.nav`
     }
 
     .logo {
-      width: 75%;
+      width: 142px;
       margin: 1rem auto;
 
       @media (max-width: 768px) {
@@ -260,6 +230,11 @@ const StyledNav = styled.nav`
   &.hide {
     transform: translate(calc(2rem - 250px));
     transition: all 0.5s ease;
+
+    & .social {
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
 
     @media (max-width: 768px) {
       transform: translate(0);
@@ -290,8 +265,8 @@ const StyledNav = styled.nav`
       color: ${props => props.theme.primaryColor};
       text-decoration: none;
       display: block;
-      padding: 1rem 2rem;
-      padding-right: 7px;
+      padding: 1rem 1.5rem;
+      padding-right: 20px;
       text-align: right;
       transition: all 0.3s ease;
 
@@ -300,13 +275,12 @@ const StyledNav = styled.nav`
       }
 
       .icon {
-        margin-left: 15px;
+        margin-left: 20px;
       }
 
       &:hover,
       &.active {
         transition: all 0.3 ease;
-        font-size: 20px;
         background-color: ${props => props.theme.linksColor};
         color: ${props => props.theme.secondaryColor};
       }
@@ -318,6 +292,8 @@ const StyledSocial = styled.div`
   padding: 2.5rem;
   display: flex;
   justify-content: space-between;
+  transition: all 0.5s ease;
+  opacity: 1;
 
   z-index: 950;
 

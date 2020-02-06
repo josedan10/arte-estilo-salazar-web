@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -20,14 +21,14 @@ export default class Home extends React.Component {
             Reinvéntate y <b>acondiciona el área que desees</b> con nosotros <b>¡Contáctanos!</b>
           </p>
 
-          <StyledLink href="/#Contact">Solicita tu presupuesto</StyledLink>
+          <StyledLink to="contacto" spy={true} smooth={true} duration={600}>Solicita tu presupuesto</StyledLink>
         </div>
       </StyledHome>
     );
   }
 }
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   background: transparent;
   border: solid 2px ${props => props.theme.secondaryColor};
   border-radius: 30px;
@@ -35,7 +36,7 @@ const StyledLink = styled.a`
   text-decoration: none;
   padding: 1rem 2rem;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 40px;
   font-weight: 500;
 
   transition: all 0.3s ease;
@@ -43,6 +44,8 @@ const StyledLink = styled.a`
   &:hover {
     background: ${props => props.theme.secondaryColor};
     color: ${props => props.theme.primaryColor};
+    text-shadow: 1px 1px 4px #696969;
+    box-shadow: 0px 5px 5px ${props => props.theme.primaryColor};
     transition: all 0.3s ease;
   }
 
@@ -99,7 +102,7 @@ const StyledHome = styled.section`
     color: ${props => props.theme.secondaryColor};
     font-size: 3rem;
     font-weight: 500;
-    max-width: 400px;
+    max-width: 500px;
     right: 150px;
     top: 25%;
     @media (max-width: 600px) {
@@ -113,9 +116,9 @@ const StyledHome = styled.section`
 
   .content {
     position: absolute;
-    top: calc(25% + 150px);
+    top: calc(25% + 180px);
     right: 150px;
-    max-width: 400px;
+    max-width: 500px;
     font-weight: 500;
     color: ${props => props.theme.secondaryColor};
     

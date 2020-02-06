@@ -71,7 +71,7 @@ const socials = [
 export default props => (
   <StyledFooter>
     <Flex flexWrap="wrap" justifyContent="space-between">
-      <Box className="branding" width={[1, 1 / 3]} px={3}>
+      <Box className="branding" width={[1, 1 / 2, 1 / 3]} px={3}>
         <img
           src="/images/logo-neg.svg"
           alt="Logo Arte y Estilo Salazar Negativo"
@@ -80,7 +80,7 @@ export default props => (
           <i>Nuestro legado es su satisfacción</i>
         </p>
       </Box>
-      <Box className="nav" width={[1, 1 / 3]} px={3}>
+      <Box className="nav" width={[1, 1 / 2, 1 / 3]} px={3}>
         {sections.map((section, index) => (
           <Link
             key={section.name + section.url + index}
@@ -93,7 +93,7 @@ export default props => (
           </Link>
         ))}
       </Box>
-      <Box className="social" width={[1, 1 / 3]} px={3}>
+      <Box className="social" width={[1, 1 / 2, 1 / 3]} px={3}>
         {socials.map(social => (
           <a key={social.url} href={social.url} target="_blank" rel="noopener noreferrer">
             {social.username}{" "}
@@ -109,9 +109,14 @@ const StyledFooter = styled.footer`
   background-color: ${props => props.theme.primaryColor};
   padding: 2rem 4rem;
   color: ${props => props.theme.secondaryColor};
+  font-size: 1.3rem;
+
+  @media (max-width: 1250px) {
+    font-size: 1rem;
+  }
 
   .branding {
-    @media (max-width: 576px) {
+    @media (max-width: 640px) {
       width: 100%;
       order: 2;
       margin-top: 4rem;
@@ -155,7 +160,7 @@ const StyledFooter = styled.footer`
   }
 
   .social {
-    @media (max-width: 576px) {
+    @media (max-width: 640px) {
       width: 100%;
       flex-direction: row;
       flex-wrap: wrap;

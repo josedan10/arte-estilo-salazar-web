@@ -36,7 +36,7 @@ export default class Contact extends React.Component {
           py={3}
         >
           <Flex mb={3}>
-            <Box width={1 / 2} px={2}>
+            <Box width={[1, 1 / 2]} px={2}>
               <StyledLabel mb={2} htmlFor="name">
                 Nombre
               </StyledLabel>
@@ -46,7 +46,7 @@ export default class Contact extends React.Component {
                 defaultValue="Jane"
               />
             </Box>
-            <Box width={1 / 2} px={2}>
+            <Box width={[1, 1 / 2]} px={2}>
               <StyledLabel mb={2} htmlFor="name">
                 Apellido
               </StyledLabel>
@@ -54,7 +54,7 @@ export default class Contact extends React.Component {
             </Box>
           </Flex>
           <Flex mb={3}>
-            <Box width={1 / 2} px={2}>
+            <Box width={[1, 1 / 2]} px={2}>
               <StyledLabel mb={2} htmlFor="name">
                 Correo
               </StyledLabel>
@@ -64,7 +64,7 @@ export default class Contact extends React.Component {
                 defaultValue="micorreo@email.com"
               />
             </Box>
-            <Box width={1 / 2} px={2}>
+            <Box width={[1, 1 / 2]} px={2}>
               <StyledLabel mb={2} htmlFor="name">
                 Teléfono
               </StyledLabel>
@@ -78,7 +78,7 @@ export default class Contact extends React.Component {
           <Flex mb={3}>
             <Box width={[1]} px={2}>
               <StyledLabel mb={2} htmlFor="message">
-                Message
+                Háblanos acerca de tu espacio soñado
               </StyledLabel>
               <StyledTextarea name="message" id="message" rows="6" />
             </Box>
@@ -113,6 +113,7 @@ const StyledButton = styled(Button)`
   color: ${props => props.theme.secondaryColor} !important;
   padding: 1rem 8rem !important;
   font-size: 1.3rem !important;
+  box-shadow: 0px 5px 5px #606060;
 
   @media (max-width: 576px) {
     width: 100%;
@@ -127,6 +128,7 @@ const StyledButton = styled(Button)`
 const StyledInput = styled(Input)`
   border: 1px solid ${props => props.theme.primaryColor} !important;
   color: ${props => props.theme.primaryColor} !important;
+  box-shadow: 0px 5px 5px #c3c3c3 inset;
 `;
 
 const StyledLabel = styled(Label)`
@@ -137,4 +139,5 @@ const StyledTextarea = styled(Textarea)`
   resize: vertical;
   border: 1px solid ${props => props.theme.primaryColor} !important;
   color: ${props => props.theme.primaryColor} !important;
+  box-shadow: 0px 5px 5px #c3c3c3 inset;
 `;

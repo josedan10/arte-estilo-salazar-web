@@ -40,8 +40,7 @@ export default withTheme(props => (
     <h1 className="section-title">En ellos dejamos nuestro legado</h1>
     <Slider {...settings}>
       {config.testimonials.map((testimonial, ind) => (
-        <div key={"testimonial-" + ind}>
-          <div className="testimonial">
+          <div key={"testimonial-" + ind} className="testimonial">
             <img
               src={testimonial.picture}
               alt={`Testimonial ${testimonial.name} Arte y Estilo Salazar`}
@@ -67,7 +66,6 @@ export default withTheme(props => (
                 ))}
             </SocialWrapper>
           </div>
-        </div>
       ))}
     </Slider>
   </StyledSection>
@@ -89,6 +87,11 @@ const StyledSection = styled.section`
   .section-title {
     color: ${props => props.theme.primaryColor};
   }
+  
+  .slick-list {
+    overflow-y: visible;
+    padding: 50px 0;
+  }
 
   .testimonial {
     background-color: ${props => props.theme.bgColor};
@@ -98,6 +101,7 @@ const StyledSection = styled.section`
     border-radius: 10px;
     border: 4px solid ${props => props.theme.primaryColor};
     margin: 0 20px;
+    box-shadow: 0px 5px 5px #606060;
 
     display: grid !important;
     grid-template-rows: repeat(9, 1fr) 1rem;
