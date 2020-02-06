@@ -92,7 +92,7 @@ export default withTheme(props => {
         <source media="(max-width: 768px)" srcSet="/images/icon.png"></source>
         <img
           className="logo"
-          src="/images/logo.png"
+          src="images/logo.png"
           alt="Arte y Estilo Salazar logo"
         />
       </picture>

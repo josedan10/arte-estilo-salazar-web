@@ -1,5 +1,5 @@
-const WORKS_PATH = '/images/works/'
-const TESTIMONIALS_PATH = '/images/testimonials/'
+const WORKS_PATH = 'images/works/'
+const TESTIMONIALS_PATH = 'images/testimonials/'
 let i = 0
 
 export default {

@@ -56,7 +56,7 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledHome = styled.section`
-  background: url(/images/home-bg.jpg);
+  background: url(images/home-bg.jpg);
   background-position: top center;
   background-size: cover;
   height: 100vh;

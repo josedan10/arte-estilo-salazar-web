@@ -73,7 +73,7 @@ export default props => (
     <Flex flexWrap="wrap" justifyContent="space-between">
       <Box className="branding" width={[1, 1 / 2, 1 / 3]} px={3}>
         <img
-          src="/images/logo-neg.svg"
+          src="images/logo-neg.svg"
           alt="Logo Arte y Estilo Salazar Negativo"
         />
         <p>
