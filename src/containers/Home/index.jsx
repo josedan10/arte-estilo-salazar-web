@@ -121,6 +121,9 @@ const StyledHome = styled.section`
     max-width: 500px;
     font-weight: 500;
     color: ${props => props.theme.secondaryColor};
+    p {
+      margin-bottom: 12px;
+    }
     
     @media (max-width: 600px) {
       right: auto;
