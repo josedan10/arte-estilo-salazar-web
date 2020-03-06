@@ -169,6 +169,10 @@ const StyledNav = styled.nav`
   flex-direction: column;
   justify-content: space-between;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   box-shadow: 0 8px 15px ${props => props.theme.primaryColor};
 
   @media (max-width: 768px) {
