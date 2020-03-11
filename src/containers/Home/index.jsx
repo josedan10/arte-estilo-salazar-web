@@ -47,6 +47,7 @@ const StyledLink = styled(Link)`
     text-shadow: 1px 1px 4px #696969;
     box-shadow: 0px 5px 5px ${props => props.theme.primaryColor};
     transition: all 0.3s ease;
+    cursor: pointer;
   }
 
   @media (max-width: 768px) {

@@ -159,11 +159,11 @@ const StyledNav = styled.nav`
   position: fixed;
   left: 0;
   top: 0;
-  background-color: ${props => props.theme.bgColor};
+  background-color: #fff;
   box-sizing: border-box;
   width: 280px;
   transition: all 0.5s ease;
-  z-index: 800;
+  z-index: 300;
   transform: translate(0);
   display: flex;
   flex-direction: column;
@@ -173,7 +173,7 @@ const StyledNav = styled.nav`
     cursor: pointer;
   }
 
-  box-shadow: 0 8px 15px ${props => props.theme.primaryColor};
+  box-shadow: 0 2px 8px ${props => props.theme.primaryColor};
 
   @media (max-width: 768px) {
     // top bar
@@ -199,7 +199,7 @@ const StyledNav = styled.nav`
     width: 280px;
     position: fixed;
     height: 100vh;
-    z-index: 850;
+    z-index: 350;
     left: 0;
     top: 0;
 
@@ -285,7 +285,7 @@ const StyledNav = styled.nav`
       &:hover,
       &.active {
         transition: all 0.3 ease;
-        background-color: ${props => props.theme.linksColor};
+        // background-color: ${props => props.theme.linksColor};
         color: ${props => props.theme.secondaryColor};
       }
     }

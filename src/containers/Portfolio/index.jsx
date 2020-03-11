@@ -22,23 +22,49 @@ export default class Portfolio extends React.Component {
         autoplay: true,
         autoplaySpeed: 5000,
         // adaptativeHeight: true,
-        centerMode: true,
+        // centerMode: true,
         centerPadding: "40px"
       },
       works: [...config.works]
     };
+
+    this.setActiveWork = this.setActiveWork.bind(this)
+    this.hideModal = this.hideModal.bind(this)
+  }
+
+  hideModal () {
+    this.setState(prevState => ({
+      ...prevState,
+      showModal: false,
+      activeWork: null
+    }));
+  }
+
+  setActiveWork (work) {
+    this.setState(prevState => ({
+      ...prevState,
+      activeWork: work,
+      showModal: true
+    }))
   }
 
   UNSAFE_componentWillMount() {}
 
   render() {
+
+    let {
+      showModal,
+      hideModal,
+      activeWork
+    } = this.state
+
     return (
       <StyledPortfolio id="portafolio" className="portfolio">
         <h1 className="section-title">Algunos de nuestros trabajos</h1>
           {this.state.works ? (
             <Slider {...this.state.slickSettings}>
               {this.state.works.map((work, ind) => (
-                <img key={`${work.title}`} src={work.images[0]} alt={work.title} />
+                <img onClick={() => this.setActiveWork(work)} key={`${work.title}`} src={work.images[0]} alt={work.title} />
               ))}
             </Slider>
           ) : (

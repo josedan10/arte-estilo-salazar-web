@@ -50,7 +50,6 @@ export default withTheme(props => (
             <p className="content">
               {/* Max length: 150 chars */}
               {testimonial.testimonial}
-              {console.log(testimonial.name, testimonial.testimonial.length)}
             </p>
 
             <SocialWrapper>
@@ -78,6 +77,10 @@ const SocialWrapper = styled.div`
 
   a {
     margin: 0 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 `;
 
@@ -94,19 +97,20 @@ const StyledSection = styled.section`
   }
 
   .testimonial {
-    background-color: ${props => props.theme.bgColor};
+    background-color: transparent;
     color: ${props => props.theme.primaryColor};
-    padding: 1rem;
-    height: 250px;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    height: 300px;
     border-radius: 10px;
     border: 4px solid ${props => props.theme.primaryColor};
     margin: 0 20px;
-    box-shadow: 0px 5px 5px #606060;
+    box-shadow: 0px 5px 5px #aeaeae;
 
     display: grid !important;
     grid-template-rows: repeat(9, 1fr) 1rem;
     grid-template-columns: repeat(2, 50px) 1fr;
-    grid-gap: 10px;
+    grid-gap: 10px 2rem;
 
     img {
       width: 100%;
@@ -123,6 +127,7 @@ const StyledSection = styled.section`
       text-decoration: underline;
       margin-bottom: 5px;
       font-weight: 500;
+      font-size: 1.5rem;
     }
 
     .title {
@@ -133,15 +138,33 @@ const StyledSection = styled.section`
     }
 
     .content {
-      margin-top: 10px;
+      margin-top: 20px;
       padding-right: 10px;
       grid-row: span 6;
+      font-size: 1.1rem;
+      color: #343536;
     }
 
-    @media (max-width: 1140px) {
+    @media (max-width: 1600px) {
+      .content {
+        margin-top: 15px;
+        font-size: 1rem;
+      }
+    }
+
+
+    @media (max-width: 1160px) {
+      grid-gap: 10px 1rem;
+
       img {
         grid-row: span 4;
         justify-self: center;
+        height: 100%;
+        width: auto;
+      }
+
+      .name {
+        font-size: 1.3rem;
       }
 
       .content {
@@ -150,9 +173,9 @@ const StyledSection = styled.section`
       }
     }
 
-    @media (max-width: 1030px) {
+    @media (max-width: 1000px) {
       img {
-        grid-row: span 2;
+        grid-row: span 3;
       }
 
       .content {

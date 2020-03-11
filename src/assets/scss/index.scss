@@ -25,11 +25,6 @@ section {
   }
 
   @media(max-width: 768px) {
-    padding: 4rem;
-    padding-top: 7rem;
-  }
-
-  @media(max-width: 576px) {
     padding: 2rem;
     padding-top: 7rem;
   }
@@ -39,10 +34,29 @@ h1.section-title {
   margin-bottom: 4rem;
   font-size: 3rem;
   letter-spacing: 2px;
-  font-weight: 500;
+  font-weight: 900;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 5px;
+    background: $primaryColor;
+    bottom: -1rem;
+    right: 0;
+  }
 
   @media (max-width: 768px) {
     text-align: center !important;
+    font-size: 2.5rem;
+    display: flex;
+
+    &::after {
+      right: auto;
+    }
   }
 }
 

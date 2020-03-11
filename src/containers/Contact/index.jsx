@@ -34,9 +34,10 @@ export default class Contact extends React.Component {
             this.handleSubmit();
           }}
           py={3}
+          className="contact-form"
         >
-          <Flex mb={3}>
-            <Box width={[1, 1 / 2]} px={2}>
+          <Flex mb={3} flexWrap="wrap">
+            <Box mb={3} width={[1, 1 / 2]} px={2}>
               <StyledLabel mb={2} htmlFor="name">
                 Nombre
               </StyledLabel>
@@ -53,8 +54,8 @@ export default class Contact extends React.Component {
               <StyledInput id="lastName" name="lastName" defaultValue="Doe" />
             </Box>
           </Flex>
-          <Flex mb={3}>
-            <Box width={[1, 1 / 2]} px={2}>
+          <Flex mb={3} flexWrap="wrap">
+            <Box mb={3} width={[1, 1 / 2]} px={2}>
               <StyledLabel mb={2} htmlFor="name">
                 Correo
               </StyledLabel>
@@ -105,6 +106,11 @@ const FormContainer = styled.section`
     @media (max-width: 576px) {
       width: 100%;
     }
+  }
+
+  .contact-form {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 `;
 

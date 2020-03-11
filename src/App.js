@@ -2,6 +2,7 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import Nav from './components/Nav'
+import WhatsappWidget from './components/WhatsappWidget'
 import theme from './theme'
 
 import './assets/scss/index.scss'
@@ -23,6 +24,7 @@ function App () {
         <Testimonials />
         <Contact />
         <Footer />
+        <WhatsappWidget />
       </main>
     </ThemeProvider>
   )

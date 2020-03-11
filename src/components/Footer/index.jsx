@@ -38,9 +38,9 @@ const sections = [
 const socials = [
   {
     name: "whatsapp",
-    url: "https://wa.me/584122308065",
+    url: "https://api.whatsapp.com/send?phone=584242473176",
     icon: faWhatsapp,
-    username: "04122308065"
+    username: "+584242473176"
   },
   {
     name: "facebook",
@@ -70,8 +70,8 @@ const socials = [
 
 export default props => (
   <StyledFooter>
-    <Flex flexWrap="wrap" justifyContent="space-between">
-      <Box className="branding" width={[1, 1 / 2, 1 / 3]} px={3}>
+    <Flex className="footer-container" flexWrap="wrap" justifyContent="space-between">
+      <Box className="branding" width={[1, 3 / 8]} pl={5} pr={3}>
         <img
           src="images/logo-neg.svg"
           alt="Logo Arte y Estilo Salazar Negativo"
@@ -79,8 +79,9 @@ export default props => (
         <p>
           <i>Nuestro legado es su satisfacción</i>
         </p>
+        <p>J-50013846-6</p>
       </Box>
-      <Box className="nav" width={[1, 1 / 2, 1 / 3]} px={3}>
+      {/* <Box className="nav" width={[1, 1 / 2]} px={3}>
         {sections.map((section, index) => (
           <Link
             key={section.name + section.url + index}
@@ -92,11 +93,11 @@ export default props => (
             {section.name}
           </Link>
         ))}
-      </Box>
-      <Box className="social" width={[1, 1 / 2, 1 / 3]} px={3}>
+      </Box> */}
+      <Box className="social" width={[1, 1 / 2]} px={3}>
         {socials.map(social => (
           <a key={social.url} href={social.url} target="_blank" rel="noopener noreferrer">
-            {social.username}{" "}
+            <span className='name'>{social.username}{" "}</span>
             <FontAwesomeIcon className="icon" icon={social.icon} size="lg" />
           </a>
         ))}
@@ -110,6 +111,11 @@ const StyledFooter = styled.footer`
   padding: 2rem 4rem;
   color: ${props => props.theme.secondaryColor};
   font-size: 1.3rem;
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
   @media (max-width: 1250px) {
     font-size: 1rem;
@@ -163,11 +169,21 @@ const StyledFooter = styled.footer`
     @media (max-width: 640px) {
       width: 100%;
       flex-direction: row;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
+      // justify-content: flex-start;
 
+      
       a {
-        margin: 5px 0;
+        margin: 10px 0;
         display: flex;
+        
+        .name {
+          display: none;
+        }
+
+        .icon {
+          font-size: 2.5rem;
+        }
 
         &:nth-child(odd) {
           margin-right: 5px;

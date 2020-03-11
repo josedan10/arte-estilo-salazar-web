@@ -45,7 +45,7 @@ export default () => (
 )
 
 const StyledAbout = styled.section`
-  background: linear-gradient(to right, #fff, ${props => props.theme.bgColor});
+  background: linear-gradient(to bottom right, #fff, ${props => props.theme.bgColor});
   color: ${props => props.theme.primaryColor};
   z-index: 20;
 
@@ -83,6 +83,10 @@ const StyledGrid = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @media (max-width: 1110px) {
+        padding: 10px 30px;
+      }
 
       @media (max-width: 768px) {
         padding: 5px 20px;
@@ -158,7 +162,7 @@ const StyledContainerDesign = styled.div`
 const StyledContainerQuality = styled.div`
   grid-column: span 2;
   grid-row: span 2;
-  
+
   @media (max-width: 768px) {
     grid-column: span 5;
     grid-row: span 1;
@@ -185,6 +189,11 @@ const StyledContainerService = styled.div`
     grid-column: span 5;
     grid-row: span 1;
   }
+
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ), url('/images/services-bg.jpg');
 
   .content {
     transform: translateX(-100%);
