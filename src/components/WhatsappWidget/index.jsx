@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export default () => (
     <StyledWidget className="whatsapp-widget">
-
+        
     </StyledWidget>    
 )
 

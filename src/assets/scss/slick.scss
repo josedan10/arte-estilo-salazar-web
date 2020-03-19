@@ -1,0 +1,33 @@
+.slick-slider {
+    .slider-arrow {
+        position: absolute;
+        top: 50%;
+        background: none !important;
+        border: none;
+        color: $primaryColor;
+        z-index: 40;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &.right {
+            right: -1.5rem;
+        }
+
+        &.left {
+            left: -1.5rem;
+        }
+    }
+
+    .slick-dots {
+        .slick-active div {
+            background-color: $secondaryColor !important;
+            transition: all .5s ease;
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

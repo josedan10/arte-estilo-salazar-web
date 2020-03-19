@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 import { Flex, Box } from "rebass";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,28 +12,28 @@ import {
   faTwitter
 } from "@fortawesome/free-brands-svg-icons";
 
-const sections = [
-  {
-    name: "Inicio",
-    url: "inicio"
-  },
-  {
-    name: "Tu mejor elección",
-    url: "por-que-elegirnos"
-  },
-  {
-    name: "Portafolio",
-    url: "portafolio"
-  },
-  {
-    name: "Clientes",
-    url: "testimonios"
-  },
-  {
-    name: "Contacto",
-    url: "contacto"
-  }
-];
+// const sections = [
+//   {
+//     name: "Inicio",
+//     url: "inicio"
+//   },
+//   {
+//     name: "Tu mejor elección",
+//     url: "por-que-elegirnos"
+//   },
+//   {
+//     name: "Portafolio",
+//     url: "portafolio"
+//   },
+//   {
+//     name: "Clientes",
+//     url: "testimonios"
+//   },
+//   {
+//     name: "Contacto",
+//     url: "contacto"
+//   }
+// ];
 
 const socials = [
   {
@@ -94,7 +94,7 @@ export default props => (
           </Link>
         ))}
       </Box> */}
-      <Box className="social" width={[1, 1 / 2]} px={3}>
+      <Box className="social" width={[1, 3 / 8 ]} px={3}>
         {socials.map(social => (
           <a key={social.url} href={social.url} target="_blank" rel="noopener noreferrer">
             <span className='name'>{social.username}{" "}</span>
@@ -149,7 +149,7 @@ const StyledFooter = styled.footer`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: right;
+    align-items: flex-end;
     text-align: right;
 
     .icon {
