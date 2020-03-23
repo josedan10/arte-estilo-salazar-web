@@ -18,19 +18,19 @@
 
 body, html, main, #root {
   background: $bgColor;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   width: 100vw;
 }
 
 section {
   padding: 5rem 7rem 5rem 9rem;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   width: 100%;
 
-  &#portafolio {
+  &#por-que-elegirnos {
 
     @media (max-width: 768px) {
-      padding: 4rem 0;
+      padding: 4rem 0 0;
     }
   }
 
@@ -44,11 +44,11 @@ section {
   }
 
   @media(max-width: 768px) {
-    padding: 4rem 0 0;
+    padding: 4rem 0 2rem;
 
-    & > h1 {
-      padding-right: 1rem;
-      padding-left: 1rem;
+    & > .container > h1 {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
     }
   }
 }
