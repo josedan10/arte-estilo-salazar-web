@@ -3,6 +3,11 @@ const TESTIMONIALS_PATH = 'images/testimonials/'
 let i = 0
 
 export default {
+  emailJS: {
+    userID: 'user_cYTCtSqaV0amt7JcWu4MQ',
+    emailTemplateID: 'contactmainpage',
+    emailServiceID: 'smtp_server'
+  },
   testimonials: [{
       name: 'Richard Páez',
       title: 'Ex director técnico de la vinotinto',

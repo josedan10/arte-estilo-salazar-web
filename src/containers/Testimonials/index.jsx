@@ -37,36 +37,38 @@ const settings = {
 };
 export default withTheme(props => (
   <StyledSection id="testimonios" className="testimonials">
-    <h1 className="section-title">En ellos dejamos nuestro legado</h1>
-    <Slider {...settings}>
-      {config.testimonials.map((testimonial, ind) => (
-          <div key={"testimonial-" + ind} className="testimonial">
-            <img
-              src={testimonial.picture}
-              alt={`Testimonial ${testimonial.name} Arte y Estilo Salazar`}
-            />
-            <h2 className="name">{testimonial.name}</h2>
-            <span className="title">{testimonial.title}</span>
-            <p className="content">
-              {/* Max length: 150 chars */}
-              {testimonial.testimonial}
-            </p>
+    <div className="container wow fadeInLeft">
+      <h1 className="section-title">En ellos dejamos nuestro legado</h1>
+      <Slider {...settings}>
+        {config.testimonials.map((testimonial, ind) => (
+            <div key={"testimonial-" + ind} className="testimonial">
+              <img
+                src={testimonial.picture}
+                alt={`Testimonial ${testimonial.name} Arte y Estilo Salazar`}
+              />
+              <h2 className="name">{testimonial.name}</h2>
+              <span className="title">{testimonial.title}</span>
+              <p className="content">
+                {/* Max length: 150 chars */}
+                {testimonial.testimonial}
+              </p>
 
-            <SocialWrapper>
-              {testimonial.socialLinks &&
-                testimonial.socialLinks.map(social => (
-                  <a href={social.url} key={social.name + testimonial.name}>
-                    <FontAwesomeIcon
-                      icon={["fab", social.name]}
-                      size="lg"
-                      color={props.theme.primaryColor}
-                    />
-                  </a>
-                ))}
-            </SocialWrapper>
-          </div>
-      ))}
-    </Slider>
+              <SocialWrapper>
+                {testimonial.socialLinks &&
+                  testimonial.socialLinks.map(social => (
+                    <a href={social.url} key={social.name + testimonial.name}>
+                      <FontAwesomeIcon
+                        icon={["fab", social.name]}
+                        size="lg"
+                        color={props.theme.primaryColor}
+                      />
+                    </a>
+                  ))}
+              </SocialWrapper>
+            </div>
+        ))}
+      </Slider>
+    </div>
   </StyledSection>
 ));
 
@@ -94,6 +96,13 @@ const StyledSection = styled.section`
   .slick-list {
     overflow-y: visible;
     padding: 50px 0;
+  }
+
+  .slick-slider {
+    @media (max-width: 768px) {
+      margin: 0 auto;
+      max-width: 500px;
+    }
   }
 
   .testimonial {

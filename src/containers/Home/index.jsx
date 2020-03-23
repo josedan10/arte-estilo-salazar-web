@@ -61,11 +61,13 @@ const StyledHome = styled.section`
   background-position: top center;
   background-size: cover;
   height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
+  padding-top: 7rem !important;
 
   @media (max-width: 768px) {
     min-height: 100vh;
+    height: auto;
   }
 
   @media (max-width: 600px) {
@@ -73,6 +75,7 @@ const StyledHome = styled.section`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: visible;
   }
 
   img {
@@ -106,12 +109,14 @@ const StyledHome = styled.section`
     max-width: 500px;
     right: 150px;
     top: 25%;
+
     @media (max-width: 600px) {
       right: auto;
       text-align: center;
       top: auto;
       position: relative;
       width: 100%;
+      font-size: 2.5rem;
     }
   }
 
@@ -122,8 +127,13 @@ const StyledHome = styled.section`
     max-width: 500px;
     font-weight: 500;
     color: ${props => props.theme.secondaryColor};
+    
     p {
       margin-bottom: 12px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 1rem;
     }
     
     @media (max-width: 600px) {

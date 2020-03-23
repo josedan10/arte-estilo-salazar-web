@@ -118,18 +118,20 @@ export default class Portfolio extends React.Component {
 
     return (
       <StyledPortfolio id="portafolio" className="portfolio">
-        <h1 className="section-title">Algunos de nuestros trabajos</h1>
-          {this.state.works ? (
-            <Slider {...this.state.slickSettings} ref={slider => (this.slider = slider)}>
-              {this.state.works.map((work, ind) => (
-                <img onClick={() => this.setActiveWork(work)} key={`${work.title}`} src={work.images[0]} alt={work.title} />
-              ))}
-            </Slider>
-          ) : (
-            "No exists works yet"
-          )}
+        <div className="container wow fadeInRight" >
+          <h1 className="section-title">Algunos de nuestros trabajos</h1>
+            {this.state.works ? (
+              <Slider {...this.state.slickSettings} ref={slider => (this.slider = slider)}>
+                {this.state.works.map((work, ind) => (
+                  <img onClick={() => this.setActiveWork(work)} key={`${work.title}`} src={work.images[0]} alt={work.title} />
+                ))}
+              </Slider>
+            ) : (
+              "No exists works yet"
+            )}
 
-        <Modal hideModal={hideModal} showModal={showModal} work={activeWork} />
+          <Modal hideModal={hideModal} showModal={showModal} work={activeWork} />
+        </div>
       </StyledPortfolio>
     );
   }

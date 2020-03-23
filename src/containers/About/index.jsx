@@ -3,44 +3,47 @@ import styled from 'styled-components'
 
 export default () => (
   <StyledAbout id='por-que-elegirnos'>
-    <h1 className='section-title'>¿Por qué elegirnos?</h1>
+    <div className="container wow fadeInUp">
 
-    <StyledGrid className="grid-container">
+      <h1 className='section-title'>¿Por qué elegirnos?</h1>
 
-      <StyledContainerFabricantes>
+      <StyledGrid className="grid-container">
 
-        <h2>Fabricación</h2>
-        <div className="content">
-          <p>
-            Disponemos de nuestro <b>taller de fabricación</b> para la elaboración e instalación de tu <b>sueño ideal</b>, con acabados y detalles que se ajustan según tu personalidad de la mano de nuestro <b>equipo especializado en carpintería</b>.
-          </p>
-        </div>
-      </StyledContainerFabricantes>
+        <StyledContainerFabricantes>
 
-      <StyledContainerDesign>
+          <h2>Fabricación</h2>
+          <div className="content">
+            <p>
+              Disponemos de nuestro <b>taller de fabricación</b> para la elaboración e instalación de tu <b>sueño ideal</b>, con acabados y detalles que se ajustan según tu personalidad de la mano de nuestro <b>equipo especializado en carpintería</b>.
+            </p>
+          </div>
+        </StyledContainerFabricantes>
 
-        <h2>Diseño</h2>
-        <div className="content">
-          <p>Cada cosa en su lugar por eso nos identificamos con <b>arte y estilo</b> para crear acorde a tus gustos y tendencias con <b>diseños modernos y clásicos</b> para la <b>construcción o remodelación del interior de tu hogar</b>.</p>
-        </div>
-      </StyledContainerDesign>
+        <StyledContainerDesign>
 
-      <StyledContainerQuality>
+          <h2>Diseño</h2>
+          <div className="content">
+            <p>Cada cosa en su lugar por eso nos identificamos con <b>arte y estilo</b> para crear acorde a tus gustos y tendencias con <b>diseños modernos y clásicos</b> para la <b>construcción o remodelación del interior de tu hogar</b>.</p>
+          </div>
+        </StyledContainerDesign>
 
-        <h2>Calidad</h2>
-        <div className="content">
-          <p>Nuestra función es crear <b>piezas y diseños de interiores</b> en lo cuales nuestros clientes se sientan en cómodos, que sean <b>sitios confortables y funcionales</b> con los materiales de <b>máxima calidad</b> y con los <b>mejores acabados</b> acorde a lo que buscas.</p>
-        </div>
-      </StyledContainerQuality>
+        <StyledContainerQuality>
 
-      <StyledContainerService>
+          <h2>Calidad</h2>
+          <div className="content">
+            <p>Nuestra función es crear <b>piezas y diseños de interiores</b> en lo cuales nuestros clientes se sientan en cómodos, que sean <b>sitios confortables y funcionales</b> con los materiales de <b>máxima calidad</b> y con los <b>mejores acabados</b> acorde a lo que buscas.</p>
+          </div>
+        </StyledContainerQuality>
 
-        <h2>Servicio</h2>
-        <div className="content">
-          <p>Sabemos que te gusta que cada detalle este <b>hecho perfectamente a tu medida</b>, por eso fabricamos según las necesidades de nuestro cliente y buscamos junto a ti el <b>asesoramiento de tus espacios</b> para una mejor opcion de <b>arte y diseño del interior de tu hogar</b>.</p>
-        </div>
-      </StyledContainerService>
-    </StyledGrid>
+        <StyledContainerService>
+
+          <h2>Servicio</h2>
+          <div className="content">
+            <p>Sabemos que te gusta que cada detalle este <b>hecho perfectamente a tu medida</b>, por eso fabricamos según las necesidades de nuestro cliente y buscamos junto a ti el <b>asesoramiento de tus espacios</b> para una mejor opcion de <b>arte y diseño del interior de tu hogar</b>.</p>
+          </div>
+        </StyledContainerService>
+      </StyledGrid>
+    </div>
   </StyledAbout>
 )
 
@@ -52,7 +55,12 @@ const StyledAbout = styled.section`
   h2 {
     font-size: 2rem;
     font-weight: 700;
+    letter-spacing: 2px;
     margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 
   p {

@@ -71,7 +71,7 @@ const socials = [
 export default props => (
   <StyledFooter>
     <Flex className="footer-container" flexWrap="wrap" justifyContent="space-between">
-      <Box className="branding" width={[1, 3 / 8]} pl={5} pr={3}>
+      <Box className="branding" width={[1, 3 / 8]} >
         <img
           src="images/logo-neg.svg"
           alt="Logo Arte y Estilo Salazar Negativo"
@@ -122,10 +122,13 @@ const StyledFooter = styled.footer`
   }
 
   .branding {
+    padding-left: 5rem;
+
     @media (max-width: 640px) {
       width: 100%;
       order: 2;
       margin-top: 4rem;
+      padding: 0;
     }
 
     img {

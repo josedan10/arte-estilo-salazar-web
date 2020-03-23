@@ -63,6 +63,7 @@ const StyledModal = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
 
     transform: translateY(0);
     transition: all .5s ease;
@@ -70,6 +71,7 @@ const StyledModal = styled.div`
     &.show {
         transform: translateY(100%);
         transition: all .5s ease;
+        opacity: 1;
     }
 
     .modal__bg {
@@ -80,7 +82,7 @@ const StyledModal = styled.div`
 
     .modal__content {        
         display: flex;
-        margin: 2rem;
+        flex-wrap: wrap;
         width: calc(100vw - 6rem);
         height: calc(100vh - 6rem);
         background: white;
@@ -88,24 +90,51 @@ const StyledModal = styled.div`
         align-items: center;
         padding: 5rem 2rem;
         z-index: 5;
+        overflow: hidden;
+
+        @media (max-width: 768px) {
+            overflow: auto;
+            width: 100vw;
+            height: 100vh;
+            padding: 2rem;
+        }
 
         .close-icon {
             position: absolute;
             color: ${props => props.theme.primaryColor};
             right: 5rem;
             top: 5rem;
+            z-index: 2;
 
             &:hover {
                 cursor: pointer;
             }
+
+            @media (max-width: 768px) {
+                right: 1rem;
+                top: 1rem;
+            }
         }
 
         .images-container {
-            width: 50%;
+            width: 48%;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                margin-bottom: 2rem;
+            }
         }
 
         &__description {
-            margin: 0 1rem;
+            padding: 0 1rem;
+            width: 48%;
+            overflow: auto;
+            height: 100%;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                height: auto;
+            }
 
             .title {
                 font-weight: 500;
