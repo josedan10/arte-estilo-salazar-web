@@ -1,51 +1,57 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default () => (
-  <StyledAbout id='por-que-elegirnos'>
-    <div className="container wow fadeInUp">
+export default () => {
+  return (
+    <StyledAbout id='por-que-elegirnos'>
+      <div className="container wow fadeInUp">
 
-      <h1 className='section-title'>¿Por qué elegirnos?</h1>
+        <h1 className='section-title'>¿Por qué elegirnos?</h1>
 
-      <StyledGrid className="grid-container">
+        <StyledGrid className="grid-container">
 
-        <StyledContainerFabricantes>
+          <StyledContainerFabricantes>
 
-          <h2>Fabricación</h2>
-          <div className="content">
-            <p>
-              Disponemos de nuestro <b>taller de fabricación</b> para la elaboración e instalación de tu <b>sueño ideal</b>, con acabados y detalles que se ajustan según tu personalidad de la mano de nuestro <b>equipo especializado en carpintería</b>.
-            </p>
-          </div>
-        </StyledContainerFabricantes>
+            <h2>Fabricación</h2>
+            <div className="seeMore">Ver Más</div>
+            <div className="content">
+              <p>
+                Disponemos de nuestro <b>taller de fabricación</b> para la elaboración e instalación de tu <b>sueño ideal</b>, con acabados y detalles que se ajustan según tu personalidad de la mano de nuestro <b>equipo especializado en carpintería</b>.
+              </p>
+            </div>
+          </StyledContainerFabricantes>
 
-        <StyledContainerDesign>
+          <StyledContainerDesign>
 
-          <h2>Diseño</h2>
-          <div className="content">
-            <p>Cada cosa en su lugar por eso nos identificamos con <b>arte y estilo</b> para crear acorde a tus gustos y tendencias con <b>diseños modernos y clásicos</b> para la <b>construcción o remodelación del interior de tu hogar</b>.</p>
-          </div>
-        </StyledContainerDesign>
+            <h2>Diseño</h2>
+            <div className="seeMore">Ver Más</div>
+            <div className="content">
+              <p>Cada cosa en su lugar por eso nos identificamos con <b>arte y estilo</b> para crear acorde a tus gustos y tendencias con <b>diseños modernos y clásicos</b> para la <b>construcción o remodelación del interior de tu hogar</b>.</p>
+            </div>
+          </StyledContainerDesign>
 
-        <StyledContainerQuality>
+          <StyledContainerQuality>
 
-          <h2>Calidad</h2>
-          <div className="content">
-            <p>Nuestra función es crear <b>piezas y diseños de interiores</b> en lo cuales nuestros clientes se sientan en cómodos, que sean <b>sitios confortables y funcionales</b> con los materiales de <b>máxima calidad</b> y con los <b>mejores acabados</b> acorde a lo que buscas.</p>
-          </div>
-        </StyledContainerQuality>
+            <h2>Calidad</h2>
+            <div className="seeMore">Ver Más</div>
+            <div className="content">
+              <p>Nuestra función es crear <b>piezas y diseños de interiores</b> en lo cuales nuestros clientes se sientan en cómodos, que sean <b>sitios confortables y funcionales</b> con los materiales de <b>máxima calidad</b> y con los <b>mejores acabados</b> acorde a lo que buscas.</p>
+            </div>
+          </StyledContainerQuality>
 
-        <StyledContainerService>
+          <StyledContainerService>
 
-          <h2>Servicio</h2>
-          <div className="content">
-            <p>Sabemos que te gusta que cada detalle este <b>hecho perfectamente a tu medida</b>, por eso fabricamos según las necesidades de nuestro cliente y buscamos junto a ti el <b>asesoramiento de tus espacios</b> para una mejor opcion de <b>arte y diseño del interior de tu hogar</b>.</p>
-          </div>
-        </StyledContainerService>
-      </StyledGrid>
-    </div>
-  </StyledAbout>
-)
+            <h2>Servicio</h2>
+            <div className="seeMore">Ver Más</div>
+            <div className="content">
+              <p>Sabemos que te gusta que cada detalle este <b>hecho perfectamente a tu medida</b>, por eso fabricamos según las necesidades de nuestro cliente y buscamos junto a ti el <b>asesoramiento de tus espacios</b> para una mejor opcion de <b>arte y diseño del interior de tu hogar</b>.</p>
+            </div>
+          </StyledContainerService>
+        </StyledGrid>
+      </div>
+    </StyledAbout>
+  )
+}
 
 const StyledAbout = styled.section`
   background: linear-gradient(to bottom right, #fff, ${props => props.theme.bgColor});
@@ -76,6 +82,7 @@ const StyledGrid = styled.div`
 
   & > div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -107,6 +114,11 @@ const StyledGrid = styled.div`
         transition: opacity .5s ease;
       }
 
+      .seeMore {
+        opacity: 0;
+        transition: opacity .5s ease;
+      }
+
       .content {
         transform: translateX(0);
         transition: all .5s .2s ease;
@@ -117,6 +129,12 @@ const StyledGrid = styled.div`
       color: white;
       transition: opacity .5s .4s ease;
       margin: 0;
+    }
+
+    .seeMore {
+      opacity: 1;
+      color: ${props => props.theme.secondaryColor};
+      transition: opacity .5s ease;
     }
   
   }
