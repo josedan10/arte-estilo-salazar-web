@@ -19,7 +19,7 @@ export default () => {
                     target="_blank"
                 >Enviar</a>
             </div>
-            <img className={`${isOpened ? "open" : "close"}`} src={`/images/${isOpened ? 'close' : 'whatsapp'}-icon.svg`} alt="whatsapp chat icon" />
+            <img className={`${isOpened ? "close" : "open"}`} src={`/images/${isOpened ? 'close' : 'whatsapp'}-icon.svg`} alt="whatsapp chat icon" />
         </StyledWidget>    
     )
 }
@@ -44,6 +44,11 @@ const StyledWidget = styled.div`
         cursor: pointer;
     }
 
+    @media (max-width: 978px) {
+        height: 60px;
+        width: 60px;
+    }
+
     &.bouncing {
         animation-name: bounceCustom;
         animation-fill-mode: forwards;
@@ -55,6 +60,10 @@ const StyledWidget = styled.div`
 
     img {
         width: 100%;
+
+        &.close {
+            width: 30px;
+        }
     }
 
     .msg-input {
@@ -75,6 +84,10 @@ const StyledWidget = styled.div`
         background: linear-gradient(to right, #fff,  #efefff);
         box-shadow: 0 0 10px rgba(0,0,0, .16);
 
+        @media (max-width: 976px) {
+            right: 60px;
+        }
+
         &.opened {
             height: 160px;
             width: 80vw;
@@ -82,9 +95,19 @@ const StyledWidget = styled.div`
             padding: 20px;
             transition: all .5s ease;
 
+            @media (max-width: 976px) {
+                height: 200px;
+                width: 50vw;
+            }
+
             textarea {
                 opacity: 1;
                 transition: opacity .5s ease .5s;
+
+                @media (max-width: 976px) {
+                    height: 110px;
+                }
+    
             }
         }
 
@@ -106,7 +129,7 @@ const StyledWidget = styled.div`
             color: ${props => props.theme.secondaryColor};
             background: ${props => props.theme.primaryColor};
             text-decoration: none;
-            padding: 5px 15px;
+            padding: 5px 40px;
             border-radius: 6px;
         }
     }
