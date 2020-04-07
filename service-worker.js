@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/arte-estilo-salazar-web/precache-manifest.53905167e1e7485dce11cdcecf3999b1.js"
+  "/arte-estilo-salazar-web/precache-manifest.94e18712122eff7a8c1774dbbffba7aa.js"
 );
 
 self.addEventListener('message', (event) => {

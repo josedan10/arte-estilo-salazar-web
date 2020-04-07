@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e2471df224aec388c79abfe766bbdc64",
+    "revision": "3a98ad61eb4efbcf263a4d96ae18eb81",
     "url": "/arte-estilo-salazar-web/index.html"
   },
   {
