@@ -138,7 +138,7 @@ export default class Portfolio extends React.Component {
 }
 
 const StyledPortfolio = styled.section`
-  background-image: url("/images/wood-texture.jpg");
+  background-image: url("images/wood-texture.jpg");
   background-size: cover;
 
   .section-title {

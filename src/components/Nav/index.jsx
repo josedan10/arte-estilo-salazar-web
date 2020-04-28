@@ -16,7 +16,8 @@ import {
   faFacebookF,
   faInstagram,
   faTelegramPlane,
-  faTwitter
+  faTwitter,
+  faPinterestP
 } from "@fortawesome/free-brands-svg-icons";
 
 const sections = [
@@ -50,30 +51,42 @@ const sections = [
 const socials = [
   {
     name: "whatsapp",
-    url: "https://wa.me/584122308065",
-    icon: faWhatsapp
+    url: "https://api.whatsapp.com/send?phone=584242473176",
+    icon: faWhatsapp,
+    username: "+584242473176"
   },
   {
     name: "facebook",
-    url: "https://www.facebook.com",
-    icon: faFacebookF
+    url: "https://www.facebook.com/carpinteriarteyestilo",
+    icon: faFacebookF,
+    username: "Arte y Estilo Salazar"
   },
   {
     name: "instagram",
-    url: "https://www.instagram.com",
-    icon: faInstagram
+    url: "https://www.instagram.com/carpinteriaarteyestilo",
+    icon: faInstagram,
+    username: "@carpinteriaarteyestilo"
   },
   {
     name: "telegram",
-    url: "https://www.telegram.com",
-    icon: faTelegramPlane
+    url: "https://t.me/arteyestiloSalazar",
+    icon: faTelegramPlane,
+    username: "+584242473176"
   },
   {
     name: "twitter",
-    url: "https://www.twitter.com",
-    icon: faTwitter
+    url: "https://www.twitter.com/carparteyestilo",
+    icon: faTwitter,
+    username: "@carparteyestilo"
+  },
+  {
+    name: "pinterest",
+    url: "https://www.pinterest.com/carpinteriaarteyestilo",
+    icon: faPinterestP,
+    username: "@carpinteriarteyestilo"
   }
 ];
+
 
 export default withTheme(props => {
   const [isHidden, setHidden] = useState(true);
@@ -89,7 +102,7 @@ export default withTheme(props => {
         onMouseLeave={e => setHidden(true)}
       />
       <picture>
-        <source media="(max-width: 768px)" srcSet="/images/icon.png"></source>
+        <source media="(max-width: 768px)" srcSet="icon.png"></source>
         <img
           className="logo"
           src="images/logo.png"
@@ -293,7 +306,7 @@ const StyledNav = styled.nav`
 `;
 
 const StyledSocial = styled.div`
-  padding: 2.5rem;
+  padding: 2.5rem 1.5rem;
   display: flex;
   justify-content: space-between;
   transition: all 0.5s ease;
@@ -303,6 +316,8 @@ const StyledSocial = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    padding: 2rem 30%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
   }
 `;

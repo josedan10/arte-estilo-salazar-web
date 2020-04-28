@@ -155,7 +155,7 @@ const StyledContainerFabricantes = styled.div`
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
-  ), url('/images/fabricantes-bg.jpg');
+  ), url('images/fabricantes-bg.jpg');
 
   .content {
     transform: translateX(100%);
@@ -176,7 +176,7 @@ const StyledContainerDesign = styled.div`
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
-  ), url('/images/design-bg.jpg');
+  ), url('images/design-bg.jpg');
 
   .content {
     transform: translateY(100%);
@@ -197,7 +197,7 @@ const StyledContainerQuality = styled.div`
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
-  ), url('/images/quality-bg.jpg');
+  ), url('images/quality-bg.jpg');
 
   .content {
     transform: translateY(-100%);
@@ -219,7 +219,7 @@ const StyledContainerService = styled.div`
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
-  ), url('/images/services-bg.jpg');
+  ), url('images/services-bg.jpg');
 
   .content {
     transform: translateX(-100%);

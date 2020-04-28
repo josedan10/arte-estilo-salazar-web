@@ -55,19 +55,20 @@ export default class Contact extends React.Component {
     }
 
     // Validate email
-    let emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
+    let emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/g
     if (
       formData.email.trim() === '' ||
-      emailRegex.test(formData.email)
+      !emailRegex.test(formData.email)
     ) {
       errors.email = "Ingresa una dirección de correo válido";
       isValid = false;
     }
 
-    let phoneRegex = /[0-9]{8:10}/;
+    let phoneRegex = /[0-9]{10,13}/g;
+    
     if (
       formData.phone.trim() === '' ||
-      phoneRegex.test(formData.phone)
+      !phoneRegex.test(formData.phone)
     ) {
       errors.phone = "Ingresa un número de teléfono válido";
       isValid = false;
@@ -114,7 +115,7 @@ export default class Contact extends React.Component {
   render() {
     return (
       <FormContainer id="contacto">
-        <div className="container wow fadeInRight">
+        <div className="container wow fadeInLeft">
           <h1 className="section-title">¡Pide ya tu cotización!</h1>
           <Box
             as="form"

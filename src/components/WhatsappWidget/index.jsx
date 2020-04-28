@@ -19,7 +19,7 @@ export default () => {
                     target="_blank"
                 >Enviar</a>
             </div>
-            <img className={`${isOpened ? "close" : "open"}`} src={`/images/${isOpened ? 'close' : 'whatsapp'}-icon.svg`} alt="whatsapp chat icon" />
+            <img className={`${isOpened ? "close" : "open"}`} src={`images/${isOpened ? 'close' : 'whatsapp'}-icon.svg`} alt="whatsapp chat icon" />
         </StyledWidget>    
     )
 }
@@ -47,6 +47,8 @@ const StyledWidget = styled.div`
     @media (max-width: 978px) {
         height: 60px;
         width: 60px;
+        right: 1rem;
+        bottom: 1rem;
     }
 
     &.bouncing {

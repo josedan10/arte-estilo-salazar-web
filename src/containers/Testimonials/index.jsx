@@ -37,7 +37,7 @@ const settings = {
 };
 export default withTheme(props => (
   <StyledSection id="testimonios" className="testimonials">
-    <div className="container wow fadeInLeft">
+    <div className="container wow fadeInRight">
       <h1 className="section-title">En ellos dejamos nuestro legado</h1>
       <Slider {...settings}>
         {config.testimonials.map((testimonial, ind) => (

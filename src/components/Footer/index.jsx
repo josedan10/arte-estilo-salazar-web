@@ -9,7 +9,8 @@ import {
   faFacebookF,
   faInstagram,
   faTelegramPlane,
-  faTwitter
+  faTwitter,
+  faPinterestP
 } from "@fortawesome/free-brands-svg-icons";
 
 // const sections = [
@@ -44,27 +45,33 @@ const socials = [
   },
   {
     name: "facebook",
-    url: "https://www.facebook.com",
+    url: "https://www.facebook.com/carpinteriarteyestilo",
     icon: faFacebookF,
     username: "Arte y Estilo Salazar"
   },
   {
     name: "instagram",
-    url: "https://www.instagram.com",
+    url: "https://www.instagram.com/carpinteriaarteyestilo",
     icon: faInstagram,
-    username: "@arteestilo_salazar"
+    username: "@carpinteriaarteyestilo"
   },
   {
     name: "telegram",
-    url: "https://www.telegram.com",
+    url: "https://t.me/arteyestiloSalazar",
     icon: faTelegramPlane,
-    username: "04122308065"
+    username: "+584242473176"
   },
   {
     name: "twitter",
-    url: "https://www.twitter.com",
+    url: "https://www.twitter.com/carparteyestilo",
     icon: faTwitter,
-    username: "@arteestilo_salazar"
+    username: "@carparteyestilo"
+  },
+  {
+    name: "pinterest",
+    url: "https://www.pinterest.com/carpinteriaarteyestilo",
+    icon: faPinterestP,
+    username: "@carpinteriarteyestilo"
   }
 ];
 

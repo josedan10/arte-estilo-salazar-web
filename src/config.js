@@ -9,27 +9,17 @@ export default {
     emailServiceID: 'smtp_server'
   },
   testimonials: [{
-      name: 'Richard Páez',
-      title: 'Ex director técnico de la vinotinto',
+      name: 'Enma Crespo',
+      title: 'Contadora y Ama de Casa',
       picture: `${TESTIMONIALS_PATH}richard.jpeg`,
       testimonial: 'Quis consequat est exercitation dolore est et elit sunt duis officia proident excepteur Lorem commodo. Anim commodo nisi ea deserunt esse est pariatu.',
       socialLinks: []
     },
     {
-      name: 'Yimy Alvarado',
-      title: 'Comerciante local y padre de familia',
-      picture: `${TESTIMONIALS_PATH}yimy.jpg`,
-      testimonial: 'Anim commodo nisi ea deserunt esse est pariatur adipisicing sit nisi duis eu voluptate. Commodo fugiat laborum eu aliquip.',
-      socialLinks: [{
-        name: 'instagram',
-        url: 'https://www.instagram.com/yimyalvarado7/'
-      }]
-    },
-    {
       name: 'José Quintero',
-      title: 'Desarrollador fullstack',
+      title: 'Desarrollador Fullstack',
       picture: `${TESTIMONIALS_PATH}jose.jpg`,
-      testimonial: 'Ex officia Lorem labore et nostrud occaecat magna cupidatat labore occaecat quis. Quis consequat est exercitation dolore est et elit sunt dui officia.',
+      testimonial: 'Realmente tienen un compromiso por hacer realidad el espacio soñado de sus clientes. Estoy súper contento con mi nueva zona de trabajo',
       socialLinks: [{
           name: 'instagram',
           url: 'https://www.instagram.com/josedanqf/'
@@ -45,54 +35,65 @@ export default {
       ]
     },
     {
-      name: 'Yimy Alvarado',
-      title: 'Comerciante local y padre de familia',
-      picture: `${TESTIMONIALS_PATH}yimy.jpg`,
-      testimonial: 'Anim commodo nisi ea deserunt esse est pariatur adipisicing sit nisi duis eu voluptate. Commodo fugiat laborum eu aliquip.',
-      socialLinks: [{
-        name: 'instagram',
-        url: 'https://www.instagram.com/yimyalvarado7/'
-      }]
+      name: 'Paola De Sánchez',
+      title: 'Odontólogo',
+      picture: `${TESTIMONIALS_PATH}paola.jpeg`,
+      testimonial: '¡Excelente trabajo! Súper responsables y comprometidos con sus clientes. ¡Nos encantó!',
+      socialLinks: []
     }
   ],
-  works: [{
-      title: 'Trabajo # 1',
-      images: [
-        `${WORKS_PATH}work1-${i++ % 3 + 1}.jpg`,
-        `${WORKS_PATH}work1-${i++ % 3 + 1}.jpg`,
-        `${WORKS_PATH}work1-${i++ % 3 + 1}.jpg`
-      ],
-      description: `<p>Eu eiusmod velit tempor aliquip do nulla sit officia officia. Ad non elit ipsum nulla exercitation anim ipsum ut occaecat anim nulla officia. Mollit tempor proident laborum esse qui velit id aliqua deserunt esse adipisicing commodo. Laboris magna laboris reprehenderit sunt adipisicing labore. Aute laborum laboris commodo officia adipisicing.</p>
-
-      <p>Nulla exercitation deserunt laboris veniam. Dolor sint aliqua enim sunt nulla in exercitation ea excepteur amet labore esse est. Ea irure anim sint excepteur tempor sint consequat et ipsum mollit.</p>
-
-      <p>Laborum in ad voluptate labore. Esse occaecat consectetur ad consequat labore exercitation dolor officia Lorem non esse enim. Consectetur proident culpa nulla eiusmod consectetur excepteur eu cupidatat officia. Exercitation excepteur sint mollit eiusmod deserunt nulla sint aute duis ea excepteur sint exercitation cillum.</p>`
-    },
+  works: [ 
     {
-      title: 'Trabajo # 2',
+      title: 'Sala de Entretenimiento',
       images: [
         `${WORKS_PATH}work2-${i++ % 3 + 1}.jpg`,
         `${WORKS_PATH}work2-${i++ % 3 + 1}.jpg`,
         `${WORKS_PATH}work2-${i++ % 3 + 1}.jpg`
       ],
-      description: `<p>Est aute et dolore sint aute non eiusmod aute nostrud consequat esse elit nostrud id. Ea do non eiusmod culpa reprehenderit occaecat amet irure consequat voluptate laboris. Sunt in aute esse consectetur irure mollit esse fugiat. Id duis consectetur eu exercitation. Ad et reprehenderit id officia sit veniam sint proident nulla. Ea reprehenderit enim culpa eu.</p>
+      description: `<p>Cada espacio en el hogar es importante y se puede aprovechar al máximo, nuestros clientes necesitaban un mueble donde pudieran colocar su Home Theater pero que también funcionara como mueble de TV, el espacio disponible aparentemente era pequeño y con una columna.</p>
 
-      <p>Pariatur enim cillum eu pariatur pariatur sint. Cillum enim et veniam magna mollit deserunt. Amet et laboris commodo pariatur nulla duis excepteur nostrud. Elit consequat eiusmod ipsum nostrud. Velit quis deserunt nostrud esse officia.</p>
+      <p>Se creó un diseño con dos repisas, una cenefa tipo repisa con luces y un mueble que va de costado a costado distribuyendo los espacios, basándonos en las dimensiones del Home Theater, en el lado de la columna se realizó en el mueble una puerta con vidrio para romper la asimetría que causaba ese espacio, ya que las otras puertas serían en laminado.</p>
 
-      <p>Laboris in dolor aute consequat qui est officia eu sit ut adipisicing mollit. Aute esse quis quis cupidatat est ullamco dolore dolor dolore culpa officia. Dolor laboris aliqua duis commodo eu deserunt fugiat consequat incididunt in adipisicing incididunt. Eiusmod minim esse enim do esse consequat incididunt laboris cillum est incididunt deserunt dolor. Aliquip incididunt veniam exercitation esse dolor esse elit nostrud velit cupidatat duis. Cupidatat Lorem dolor occaecat in labore non dolor excepteur est labore laborum.</p>`
+      <p>La fabricación tenía un tiempo de entrega establecido de diez días hábiles, pero ya casi era navidad y nuestros clientes necesitaban el trabajo en cinco días y así fue, trabajamos en tiempo récord.</p>`
     },
     {
-      title: 'Trabajo # 3',
+      title: 'Cocina en mampostería',
       images: [
-        `${WORKS_PATH}work3-${i++ % 3 + 1}.jpg`,
-        `${WORKS_PATH}work3-${i++ % 3 + 1}.jpg`,
-        `${WORKS_PATH}work3-${i++ % 3 + 1}.jpg`
+        `${WORKS_PATH}work2-${i++ % 3 + 1}.jpg`,
+        `${WORKS_PATH}work2-${i++ % 3 + 1}.jpg`,
+        `${WORKS_PATH}work2-${i++ % 3 + 1}.jpg`
       ],
-      description: `<p>Deserunt enim ipsum amet excepteur velit veniam culpa exercitation anim aute pariatur commodo. Irure voluptate est aute esse incididunt. Aute laborum est Lorem ex occaecat nostrud et ad anim. Eiusmod voluptate Lorem voluptate ut consectetur minim tempor officia velit fugiat cupidatat mollit laboris duis. Minim consequat aliquip ex dolor.</p>
+      description: `<p>La cocina en mampostería resulta ser un desafío, ya que el 90% de las veces existen desniveles. El reto con la carpintería es lograr la simetría con la madera en las puertas y gavetas. Nuestro cliente ya tenía el color beige determinado para el laminado, color que contrasta con la cerámica.</p>
 
-      <p>Tempor est sint sunt aute sunt aliquip aliqua proident aliquip. Officia velit cupidatat deserunt laborum nostrud anim aliquip. In esse mollit do quis veniam est laboris amet et quis ea exercitation culpa. Ullamco reprehenderit consequat irure in culpa consectetur commodo. Excepteur amet ullamco sunt qui velit cupidatat qui. Nisi commodo ullamco laborum velit eu do laborum ea sunt minim.</p>
+      <p>En este tipo de proyectos, la instalación dura más que la fabricación, ya que la mayor parte del trabajo se realiza en lugar para tener un acabado perfecto.</p>`
+    },
+    {
+      title: 'Cocina Empotrada',
+      images: [
+        `${WORKS_PATH}cocina${i++ % 3 + 1}.png`,
+        `${WORKS_PATH}cocina${i++ % 3 + 1}.png`,
+        `${WORKS_PATH}cocina${i++ % 3 + 1}.png`
+      ],
+      description: `<p>Muchas personas llegan a nosotros llenos de ideas pero sin la seguridad de saber que es lo que realmente quieren, y este fue el caso. Luego de una larga conversación dónde descubrimos la necesidad y gusto de nuestros clientes, les presentamos el diseño.</p>
 
-      <p>Sint enim labore excepteur sint labore. Laborum excepteur cillum ad non. Sit tempor occaecat duis adipisicing incididunt ex culpa.</p>`
+      <p>Necesitaban renovar la cocina con la finalidad de tener mayor almacenamiento, mejor distribución de los espacios y reubicación de  los electrodomésticos. </p>
+      
+      <p>Para ello se crearon dos muebles bases: en el primero se encuentran los electrodomésticos principales y el segundo cuenta con tres espacios de almacenamiento y un tope en granito que funciona también como mesón comedor. Tanto los muebles de pared como la despensa y torre de horno, se fabricaron hasta el techo para aprovechar al máximo el espacio, así mismo se fabricó un mueble para empotrar ambas neveras con un espacio de almacenamiento en la parte superior.</p>
+      
+      <p>El color blanco alto brillo mejora la iluminación, crea la sensación de amplitud en el espacio y da el toque de elegancia, el laminado perfecto para esta cocina, ya que había muy poca luz natural en el lugar.</p>`
+    },
+    {
+      title: 'Mueble Gavetero',
+      images: [
+        `${WORKS_PATH}work2-${i++ % 3 + 1}.jpg`,
+        `${WORKS_PATH}work2-${i++ % 3 + 1}.jpg`,
+        `${WORKS_PATH}work2-${i++ % 3 + 1}.jpg`
+      ],
+      description: `<p>Muchas personas llegan a nosotros llenos de ideas pero sin la seguridad de saber que es lo que realmente quieren, y este fue el caso. Luego de una larga conversación dónde descubrimos la necesidad y gusto de nuestros clientes, les presentamos el diseño.</p>
+
+      <p>Algunas personas solo quieren algo que sea funcional sin importar el diseño, este cliente necesitaba un mueble gavetero para almacenar más prendas.</p>
+      
+      <p>Fabricamos el mueble con un estilo clásico, laminado en blanco para que hubiese armonía con los otros muebles de la habitación.</p>`
     }
   ]
 }
