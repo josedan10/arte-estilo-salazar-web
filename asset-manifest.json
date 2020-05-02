@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/arte-estilo-salazar-web/static/css/main.dc6033b3.chunk.css",
-    "main.js": "/arte-estilo-salazar-web/static/js/main.ecf27794.chunk.js",
-    "main.js.map": "/arte-estilo-salazar-web/static/js/main.ecf27794.chunk.js.map",
+    "main.js": "/arte-estilo-salazar-web/static/js/main.eb225e12.chunk.js",
+    "main.js.map": "/arte-estilo-salazar-web/static/js/main.eb225e12.chunk.js.map",
     "runtime-main.js": "/arte-estilo-salazar-web/static/js/runtime-main.63be2096.js",
     "runtime-main.js.map": "/arte-estilo-salazar-web/static/js/runtime-main.63be2096.js.map",
     "static/css/2.79a28be8.chunk.css": "/arte-estilo-salazar-web/static/css/2.79a28be8.chunk.css",
     "static/js/2.9b647b82.chunk.js": "/arte-estilo-salazar-web/static/js/2.9b647b82.chunk.js",
     "static/js/2.9b647b82.chunk.js.map": "/arte-estilo-salazar-web/static/js/2.9b647b82.chunk.js.map",
     "index.html": "/arte-estilo-salazar-web/index.html",
-    "precache-manifest.c7e1fdbb25c72412968b5c3edce7bd14.js": "/arte-estilo-salazar-web/precache-manifest.c7e1fdbb25c72412968b5c3edce7bd14.js",
+    "precache-manifest.b3a1030e6f4b6d4faaa9c14734f6be50.js": "/arte-estilo-salazar-web/precache-manifest.b3a1030e6f4b6d4faaa9c14734f6be50.js",
     "service-worker.js": "/arte-estilo-salazar-web/service-worker.js",
     "static/css/2.79a28be8.chunk.css.map": "/arte-estilo-salazar-web/static/css/2.79a28be8.chunk.css.map",
     "static/css/main.dc6033b3.chunk.css.map": "/arte-estilo-salazar-web/static/css/main.dc6033b3.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.79a28be8.chunk.css",
     "static/js/2.9b647b82.chunk.js",
     "static/css/main.dc6033b3.chunk.css",
-    "static/js/main.ecf27794.chunk.js"
+    "static/js/main.eb225e12.chunk.js"
   ]
 }
