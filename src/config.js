@@ -59,9 +59,8 @@ export default {
     {
       title: 'Cocina en mampostería',
       images: [
-        `${WORKS_PATH}work2-${i++ % 3 + 1}.jpg`,
-        `${WORKS_PATH}work2-${i++ % 3 + 1}.jpg`,
-        `${WORKS_PATH}work2-${i++ % 3 + 1}.jpg`
+        `${WORKS_PATH}cocinaNew1.png`,
+        `${WORKS_PATH}cocinaNew2.png`
       ],
       description: `<p>La cocina en mampostería resulta ser un desafío, ya que el 90% de las veces existen desniveles. El reto con la carpintería es lograr la simetría con la madera en las puertas y gavetas. Nuestro cliente ya tenía el color beige determinado para el laminado, color que contrasta con la cerámica.</p>
 
@@ -89,11 +88,20 @@ export default {
         `${WORKS_PATH}work2-${i++ % 3 + 1}.jpg`,
         `${WORKS_PATH}work2-${i++ % 3 + 1}.jpg`
       ],
-      description: `<p>Muchas personas llegan a nosotros llenos de ideas pero sin la seguridad de saber que es lo que realmente quieren, y este fue el caso. Luego de una larga conversación dónde descubrimos la necesidad y gusto de nuestros clientes, les presentamos el diseño.</p>
-
-      <p>Algunas personas solo quieren algo que sea funcional sin importar el diseño, este cliente necesitaba un mueble gavetero para almacenar más prendas.</p>
+      description: `<p>Algunas personas solo quieren algo que sea funcional sin importar el diseño, este cliente necesitaba un mueble gavetero para almacenar más prendas.</p>
       
       <p>Fabricamos el mueble con un estilo clásico, laminado en blanco para que hubiese armonía con los otros muebles de la habitación.</p>`
-    }
+    },
+    {
+      title: 'Zapatera',
+      images: [
+        `${WORKS_PATH}zapatera1.png`,
+        `${WORKS_PATH}zapatera2.png`,
+      ],
+      description: `<p>A veces se tiene por costumbre usar cualquier espacio para guardar el calzado, pero cuando va aumentando la cantidad puede ocasionar un desorden. Nuestros clientes necesitaban algo para tener una mejor organización ya que sus zapatos estaban amontonados en un rincón de la habitación, por ende se le hicieron algunas sugerencias. En primer lugar, se pensó que lo ideal para ellos era proporcionarles una zapatera vertical de  1.80m y además, aprovechar la altura para colocar en la puerta un espejo, ya que se notó la ausencia de uno en todo el lugar.</p>
+
+      <p>Se fabricó la zapatera laminado en blanco mate en su exterior y blanco brillante en su interior. Las divisiones internas se fabricaron cuadradas del tamaño estándar de una caja de zapatos, y ya que tenía una profundidad de 60cm se podía almacenar aproximadamente cuarenta pares. Además, se le colocó ruedas giroscopio para facilitar su movilidad al momento de limpiar o simplemente cambiarlo de lugar.</p>`
+    },
+
   ]
 }

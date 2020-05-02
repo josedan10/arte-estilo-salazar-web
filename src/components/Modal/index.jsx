@@ -145,6 +145,7 @@ const StyledModal = styled.div`
 
             .content {
                 text-align: justify;
+                margin-top: 4rem;
 
                 p {
                     margin-bottom: 1rem;
