@@ -172,7 +172,7 @@ const StyledPortfolio = styled.section`
       
       .icon {
         position: absolute;
-        bottom: 5%;
+        top: 5%;
         right: 5%;
         color: ${props => props.theme.primaryColor};
         z-index: 2;
