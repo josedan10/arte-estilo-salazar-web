@@ -124,13 +124,13 @@ export default class Portfolio extends React.Component {
               <Slider {...this.state.slickSettings} ref={slider => (this.slider = slider)}>
                 {this.state.works.map((work, ind) => (
                   <div onClick={() => this.setActiveWork(work)} key={`${work.title}`} className="img-container">
-                    <div className="preview">
+                    <div style={{backgroundImage: `url(${work.images[0]})`}}  className="preview">
                       <FontAwesomeIcon
+                        className="icon"
                         icon="eye"
                         size="2x"
                       />
                     </div>
-                    <img src={work.images[0]} alt={work.title} />
                   </div>
                 ))}
               </Slider>
@@ -156,19 +156,24 @@ const StyledPortfolio = styled.section`
 
   .img-container {
     position: relative;
+    width: 100%;
+    height: 80vh;
     
-    img {
-      width: 100%;
-    }
-
     .preview {
-      position: absolute;
-      bottom: 5%;
-      right: 5%;
-      color: ${props => props.theme.primaryColor};
-      font-weight: 700;
-      font-size: 16px;
-      z-index: 2;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; 
+      
+      .icon {
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        color: ${props => props.theme.primaryColor};
+        z-index: 2;
+      }
     }
 
     &:hover {

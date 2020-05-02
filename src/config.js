@@ -102,6 +102,21 @@ export default {
 
       <p>Se fabricó la zapatera laminado en blanco mate en su exterior y blanco brillante en su interior. Las divisiones internas se fabricaron cuadradas del tamaño estándar de una caja de zapatos, y ya que tenía una profundidad de 60cm se podía almacenar aproximadamente cuarenta pares. Además, se le colocó ruedas giroscopio para facilitar su movilidad al momento de limpiar o simplemente cambiarlo de lugar.</p>`
     },
+    {
+      title: 'Escritorio',
+      images: [
+        `${WORKS_PATH}desktop1.jpg`,
+        `${WORKS_PATH}desktop2.jpg`,
+        `${WORKS_PATH}desktop3.jpg`,
+        `${WORKS_PATH}desktop4.jpg`,
+        `${WORKS_PATH}desktop5.jpg`,
+        `${WORKS_PATH}desktop6.jpg`,
+        `${WORKS_PATH}desktop7.png`,
+      ],
+      description: `<p>A veces se tiene por costumbre usar cualquier espacio para guardar el calzado, pero cuando va aumentando la cantidad puede ocasionar un desorden. Nuestros clientes necesitaban algo para tener una mejor organización ya que sus zapatos estaban amontonados en un rincón de la habitación, por ende se le hicieron algunas sugerencias. En primer lugar, se pensó que lo ideal para ellos era proporcionarles una zapatera vertical de  1.80m y además, aprovechar la altura para colocar en la puerta un espejo, ya que se notó la ausencia de uno en todo el lugar.</p>
+
+      <p>Se fabricó la zapatera laminado en blanco mate en su exterior y blanco brillante en su interior. Las divisiones internas se fabricaron cuadradas del tamaño estándar de una caja de zapatos, y ya que tenía una profundidad de 60cm se podía almacenar aproximadamente cuarenta pares. Además, se le colocó ruedas giroscopio para facilitar su movilidad al momento de limpiar o simplemente cambiarlo de lugar.</p>`
+    },
 
   ]
 }
