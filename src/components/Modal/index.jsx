@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const settings = {
     dots: false,
+    lazyLoad: 'ondemand',
+    // adaptativeHeight: true,
     arrows: false,
     infinite: true,
     speed: 600,
@@ -13,6 +15,7 @@ const settings = {
     autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
+    // centerMode: true,
     centerPadding: "40px",
 }
 
@@ -35,7 +38,9 @@ export default (props) => {
                                 {...settings}
                             >
                                 {props.work.images.map((image, ind) => (
-                                    <img src={image} alt="Proyecto de Arte y Estilo Salazar" key={image + ind}/>
+                                    <div className="img-wrapper">
+                                        <img src={image} alt="Proyecto de Arte y Estilo Salazar" key={image + ind}/>
+                                    </div>
                                 ))}
                             </Slick>
                         </div>
@@ -118,9 +123,32 @@ const StyledModal = styled.div`
 
         .images-container {
             width: 48%;
+            height: 100%;
 
-            img {
-                border-radius: 8px;
+            .slick-slider,
+            .slick-list,
+            .slick-track {
+                height: 100%;
+            }
+
+            .slick-slide {
+                div {
+                    height: 100%;
+
+                    .img-wrapper {
+                        height: 100%;
+                        width: 100%;
+                        display: flex !important;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                img {
+                    border-radius: 8px;
+                    max-height: 100%;
+                    max-width: 100%;
+                }
             }
 
             @media (max-width: 768px) {
