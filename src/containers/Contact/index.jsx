@@ -259,6 +259,9 @@ const StyledInput = styled(Input)`
   border: 1px solid ${props => props.theme.primaryColor} !important;
   color: ${props => props.theme.primaryColor} !important;
   box-shadow: 0px 5px 5px #c3c3c3 inset;
+  border-radius: 5px;
+  height: 50px;
+  font-size: 1.25rem;
 
   &.error {
     color: #ed3d3d !important;
@@ -272,6 +275,7 @@ const StyledLabel = styled(Label)`
 const StyledTextarea = styled(Textarea)`
   resize: vertical;
   border: 1px solid ${props => props.theme.primaryColor} !important;
+  border-radius: 5px;
   color: ${props => props.theme.primaryColor} !important;
   box-shadow: 0px 5px 5px #c3c3c3 inset;
 `;

@@ -69,7 +69,7 @@ export default class Portfolio extends React.Component {
         speed: 600,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 5000,
         // adaptativeHeight: true,
         // centerMode: true,
@@ -123,9 +123,14 @@ export default class Portfolio extends React.Component {
             {this.state.works ? (
               <Slider {...this.state.slickSettings} ref={slider => (this.slider = slider)}>
                 {this.state.works.map((work, ind) => (
-                  <div key={`${work.title}`} className="img-container">
+                  <div onClick={() => this.setActiveWork(work)} key={`${work.title}`} className="img-container">
+                    <div className="preview">
+                      <FontAwesomeIcon
+                        icon="eye"
+                        size="2x"
+                      />
+                    </div>
                     <img src={work.images[0]} alt={work.title} />
-                    <div onClick={() => this.setActiveWork(work)} className="preview">Ver detalles</div>
                   </div>
                 ))}
               </Slider>
@@ -157,29 +162,17 @@ const StyledPortfolio = styled.section`
     }
 
     .preview {
-      width: 100%;
-      height: 100%;
       position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      transition: all .5s ease;
-      background: rgba(255, 255, 255, 0.4);
+      bottom: 5%;
+      right: 5%;
       color: ${props => props.theme.primaryColor};
-      display: flex;
-      justify-content: center;
-      align-items: center;
       font-weight: 700;
-      font-size: 40px;
+      font-size: 16px;
+      z-index: 2;
     }
 
     &:hover {
       cursor: pointer;
-
-      .preview {
-        opacity: 1;
-        transition: all .5s ease;
-      }
     }
   }
 `;
