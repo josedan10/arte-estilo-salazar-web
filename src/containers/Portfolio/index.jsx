@@ -71,7 +71,6 @@ export default class Portfolio extends React.Component {
         slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 5000,
-        lazyLoad: 'ondemand',
         // adaptativeHeight: true,
         // centerMode: true,
         prevArrow: <LeftArrowIcon />,

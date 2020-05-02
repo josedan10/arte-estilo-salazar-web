@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const settings = {
     dots: false,
-    lazyLoad: 'ondemand',
     // adaptativeHeight: true,
     arrows: false,
     infinite: true,
