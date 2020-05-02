@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b2e3b341a598a31aaa0ffbe8d9f43f51",
+    "revision": "8886204e5f447185a8e6e08d2960d77b",
     "url": "/arte-estilo-salazar-web/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/arte-estilo-salazar-web/static/css/2.79a28be8.chunk.css"
   },
   {
-    "revision": "36632792676db63b3b24",
+    "revision": "2f80b306e15cd71dc4c3",
     "url": "/arte-estilo-salazar-web/static/css/main.dc6033b3.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/arte-estilo-salazar-web/static/js/2.66ae044e.chunk.js"
   },
   {
-    "revision": "36632792676db63b3b24",
-    "url": "/arte-estilo-salazar-web/static/js/main.8a9601dd.chunk.js"
+    "revision": "2f80b306e15cd71dc4c3",
+    "url": "/arte-estilo-salazar-web/static/js/main.260e93ec.chunk.js"
   },
   {
     "revision": "214d5d06897124835897",
