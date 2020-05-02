@@ -158,6 +158,8 @@ const StyledPortfolio = styled.section`
     position: relative;
     width: 100%;
     height: 80vh;
+    border: solid 5px ${props => props.theme.primaryColor};
+    border-radius: 5px;
     
     .preview {
       position: relative;

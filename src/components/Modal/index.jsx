@@ -119,6 +119,10 @@ const StyledModal = styled.div`
         .images-container {
             width: 48%;
 
+            img {
+                border-radius: 8px;
+            }
+
             @media (max-width: 768px) {
                 width: 100%;
                 margin-bottom: 2rem;
